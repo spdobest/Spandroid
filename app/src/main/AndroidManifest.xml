@@ -95,6 +95,10 @@
         </activity>
         <activity android:name=".contentProv.ContentProviderActivity" >
         </activity>
+        <activity android:name=".dagger2.Dagger2Activity" >
+        </activity>
+        <activity android:name=".eventBus.EventBusActivity" >
+        </activity>
     </application>
 
 </manifest>
