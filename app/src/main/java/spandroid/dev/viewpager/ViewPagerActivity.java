@@ -3,6 +3,8 @@ package spandroid.dev.viewpager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import spandroid.dev.R;
+
 public class ViewPagerActivity extends AppCompatActivity {
 
     @Override

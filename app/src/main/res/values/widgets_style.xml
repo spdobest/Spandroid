@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Match Parent Layouts -->
+    <style name="layoutStyle_match" >
+
+    </style>
+ <!-- Match Parent Layouts -->
+    <style name="layoutStyle_wrap"  >
+
+    </style>
+</resources>

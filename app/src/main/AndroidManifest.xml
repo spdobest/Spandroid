@@ -45,8 +45,6 @@
         </activity>
         <activity android:name=".handlerThread.HandlerThreadActivity" >
         </activity>
-        <activity android:name=".launchMode.LaunchModeActivity" >
-        </activity>
         <activity android:name=".intentService.IntentServiceActivity" >
         </activity>
         <activity android:name=".jobSchedulers.JobSchedulerActivity" >
@@ -99,6 +97,24 @@
         </activity>
         <activity android:name=".eventBus.EventBusActivity" >
         </activity>
+
+        <!-- LAUNCHER MODES -->
+        <activity android:name=".launchMode.LaunchModeActivity" >
+        </activity>
+        <activity
+            android:name=".launchMode.SingleTaskActivity"
+            android:label="singleTask launchMode"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name=".launchMode.SingleTopActivity" >
+        </activity>
+        <activity android:name=".launchMode.StandardActivity" >
+        </activity>
+        <activity android:name=".launchMode.TaskAffinityActivity" ><activity android:name=".launchMode.SingleInstanceActivity" android:launchMode="singleInstance"
+    android:taskAffinity="" >
+        </activity>
+        </activity> <!-- END LAUNCHER MODES -->
+
     </application>
 
 </manifest>

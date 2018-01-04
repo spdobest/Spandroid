@@ -3,6 +3,8 @@ package spandroid.dev.base;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import spandroid.dev.R;
+
 public class BaseActivity extends AppCompatActivity {
 
     @Override

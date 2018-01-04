@@ -10,14 +10,13 @@ import android.os.Build;
 import android.provider.Settings;
 import android.text.format.Formatter;
 
-import com.angelbroking.financialplanning.helper.HelperInterface;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.util.Collections;
 import java.util.List;
 
-public class MarshmallowUtils implements HelperInterface {
+public class MarshmallowUtils  {
 
     public static boolean isMarshmallowDevice() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -111,8 +110,5 @@ public class MarshmallowUtils implements HelperInterface {
         return ipAddress;
     }
 
-    @Override
-    public ApplicationHelper getHelper() {
-        return ApplicationHelper.getInstance();
-    }
+
 }

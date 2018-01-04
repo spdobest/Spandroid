@@ -23,6 +23,8 @@ import android.content.Intent.ShortcutIconResource;
 import android.database.Cursor;
 import android.net.Uri;
 
+import spandroid.dev.R;
+
 /**
  * 创建删除快捷图标
  *

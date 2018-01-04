@@ -30,7 +30,6 @@ import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.spcart.shop.R;
 
 import org.json.JSONObject;
 
@@ -59,6 +58,8 @@ import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
+
+import spandroid.dev.R;
 
 /**
  * Created by Sibaprasad on 20/10/16.
@@ -490,7 +491,7 @@ public class Utility {
         alertDialog.setMessage(Message);
 
 // Setting Icon to Dialog
-        alertDialog.setIcon( R.drawable.ic_cast_dark);
+        alertDialog.setIcon( R.mipmap.ic_launcher);
 
 // Setting OK Button
         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {

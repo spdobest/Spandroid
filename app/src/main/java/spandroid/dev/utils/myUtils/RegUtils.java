@@ -18,7 +18,7 @@ package spandroid.dev.utils.myUtils;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.ihongqiqu.util.StringUtils.isEmpty;
+import static spandroid.dev.utils.ObjectUtils.isEmpty;
 
 /**
  * 数据校验

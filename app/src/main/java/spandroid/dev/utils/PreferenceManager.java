@@ -9,11 +9,12 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 
-import com.spcart.shop.common.Constants;
 
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import spandroid.dev.common.Constants;
 
 
 /**

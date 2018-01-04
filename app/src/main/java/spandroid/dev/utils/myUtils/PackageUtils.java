@@ -30,8 +30,6 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.ihongqiqu.util.ShellUtils.CommandResult;
-
 import java.io.File;
 import java.util.List;
 
@@ -185,7 +183,7 @@ public final class PackageUtils {
                 .append("LD_LIBRARY_PATH=/vendor/lib:/system/lib pm install ")
                 .append(pmParams == null ? "" : pmParams).append(" ")
                 .append(filePath.replace(" ", "\\ "));
-        CommandResult commandResult = ShellUtils.execCommand(
+        ShellUtils.CommandResult commandResult = ShellUtils.execCommand(
                 command.toString(), !isSystemApplication(context), true);
         if (commandResult.successMsg != null
                 && (commandResult.successMsg.contains("Success") || commandResult.successMsg
@@ -416,7 +414,7 @@ public final class PackageUtils {
                 .append("LD_LIBRARY_PATH=/vendor/lib:/system/lib pm uninstall")
                 .append(isKeepData ? " -k " : " ")
                 .append(packageName.replace(" ", "\\ "));
-        CommandResult commandResult = ShellUtils.execCommand(
+        ShellUtils.CommandResult commandResult = ShellUtils.execCommand(
                 command.toString(), !isSystemApplication(context), true);
         if (commandResult.successMsg != null
                 && (commandResult.successMsg.contains("Success") || commandResult.successMsg
@@ -562,7 +560,7 @@ public final class PackageUtils {
      * @see {@link IPackageManager#getInstallLocation()}
      */
     public static int getInstallLocation() {
-        CommandResult commandResult = ShellUtils
+        ShellUtils.CommandResult commandResult = ShellUtils
                 .execCommand(
                         "LD_LIBRARY_PATH=/vendor/lib:/system/lib pm get-install-location",
                         false, true);
