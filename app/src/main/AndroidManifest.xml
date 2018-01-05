@@ -110,10 +110,12 @@
         </activity>
         <activity android:name=".launchMode.StandardActivity" >
         </activity>
-        <activity android:name=".launchMode.TaskAffinityActivity" ><activity android:name=".launchMode.SingleInstanceActivity" android:launchMode="singleInstance"
+        <activity android:name=".launchMode.TaskAffinityActivity"></activity>
+        <activity
+            android:name=".launchMode.SingleInstanceActivity"
     android:taskAffinity="" >
         </activity>
-        </activity> <!-- END LAUNCHER MODES -->
+        <!-- END LAUNCHER MODES -->
 
     </application>
 

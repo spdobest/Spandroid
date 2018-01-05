@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootRelative_fragmentb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="spandroid.dev.fragment.FragmentA">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Fragment B"
+        android:textSize="25sp" />
+
+    <include layout="@layout/include_bottombar" />
+</RelativeLayout>
