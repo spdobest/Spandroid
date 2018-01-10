@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layoutStyle_matchmatch"
+    android:background="@color/white"
+    android:padding="@dimen/dimen_0dp">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewSlidingImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_launcher"></android.support.v7.widget.AppCompatImageView>
+
+    <FrameLayout
+        android:id="@+id/frameLayoutBannerTextItem"
+        android:layout_width="@dimen/dimen_250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:alpha="0.7"
+        android:background="@android:color/black"
+        android:padding="@dimen/dimen_10dp">
+
+        <com.spcart.shop.views.TextViewBold
+            android:id="@+id/textViewBannerItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dimen_14sp" />
+    </FrameLayout>
+</RelativeLayout>

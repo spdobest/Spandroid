@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector>
+
+    <!--DEFINE THE DRAWABLE -->
+    <!--<item android:drawable="@drawable/checkedradiobutton" android:state_checked="true" />
+    <item android:drawable="@drawable/unchekedradiobutton" android:state_checked="false" />
+-->
+</selector>

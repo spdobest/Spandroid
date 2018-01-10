@@ -3,10 +3,174 @@
 
     <!-- Match Parent Layouts -->
     <style name="layoutStyle_match" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <!-- WRAP Parent Layouts -->
+    <style name="layoutStyle_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <!-- WRAP Parent Layouts -->
+    <style name="layoutStyle_matchWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- WRAP Parent Layouts -->
+    <style name="layoutStyle_matchmatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--BUTTON STYLE WITH RIPPLE-->
+    <style name="Button">
+        <item name="android:textColor">@drawable/button_textcolor_selector</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:background">@drawable/button_selector_primary</item>
+    </style>
+
+    <style name="transparent">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:paddingLeft">4dip</item>
+        <item name="android:paddingRight">4dip</item>
+        <item name="android:paddingBottom">1dip</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="SimpleButtonBar">
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="AppTheme.base" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!--EDITTEXT GROUP STYLE-->
+    <style name="Widget.Group" parent="@android:style/Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">-1dp
+        </item> <!-- Ensures we don't get a 2 dp top stroke -->
+        <item name="android:padding">4dp</item>
+        <item name="android:background">@drawable/edittext_group_bg_single</item>
+    </style>
+
+    <style name="Widget.Group.Top">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/edittext_group_bg_top</item>
+    </style>
+
+    <style name="Widget.Group.Bottom">
+        <item name="android:background">@drawable/edittext_group_bg_bottom</item>
+    </style>
+
+    <style name="Widget.Group.Single" parent="Widget.Group.Top">
+        <item name="android:background">@drawable/edittext_group_bg_single</item>
+    </style>
+
+    <!--EDITTEXT STYLE-->
+    <color name="ora">#FFBB33</color>
+
+    <style name="venus">
+        <item name="android:textColor">@color/ora</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="venus.center">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--RADIO BUTTON STYLE-->
+
+    <style name="radio_style">
+        <item name="android:textColor">@color/ora</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@drawable/radio_button_selector</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <!--CHECKBOX BUTTON STYLE-->
+
+    <style name="checkbox_style">
+        <item name="android:textColor">@color/ora</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@drawable/checkbox_selector</item>
+        <item name="android:padding">5dp</item>
 
     </style>
- <!-- Match Parent Layouts -->
-    <style name="layoutStyle_wrap"  >
 
+    <!--RATINGBAR STYLE-->
+    <style name="customRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_selector</item>
+        <item name="android:minHeight">50dip</item>
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
+
+    <style name="StarRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_selector</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+    </style>
+
+    <!--SEEKBAR STYLE-->
+    <style name="customSeekBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/seekbar_progress_selector</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--DIALOG STYLE-->
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#FFCC00</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:background">#5fa3d0</item>
+    </style>
+
+    <!--DIALOG ANIMATION AND STYLE-->
+    <style name="MyCustomDialogTheme" parent="@android:style/Theme.Panel">
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+    </style>
+
+    <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/enter_from_left</item>
+        <item name="android:windowExitAnimation">@anim/dialog_anim_out</item>
+    </style>
+
+    // Style DIALOG FRAGMENT
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/bounce</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+
 </resources>
