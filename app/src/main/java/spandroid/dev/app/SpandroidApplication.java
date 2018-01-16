@@ -7,6 +7,7 @@ import javax.inject.Inject;
 
 import spandroid.dev.dagger2.data.DataManager;
 import spandroid.dev.dagger2.di.component.ApplicationComponent;
+import spandroid.dev.dagger2.di.component.DaggerApplicationComponent;
 import spandroid.dev.dagger2.di.module.ApplicationModule;
 
 /**

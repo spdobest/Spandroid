@@ -12,6 +12,7 @@ import spandroid.dev.app.SpandroidApplication;
 import spandroid.dev.dagger2.data.DataManager;
 import spandroid.dev.dagger2.data.model.User;
 import spandroid.dev.dagger2.di.component.ActivityComponent;
+import spandroid.dev.dagger2.di.component.DaggerActivityComponent;
 import spandroid.dev.dagger2.di.module.ActivityModule;
 
 public class Dagger2Activity extends AppCompatActivity {

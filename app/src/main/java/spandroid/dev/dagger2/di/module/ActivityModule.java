@@ -3,10 +3,9 @@ package spandroid.dev.dagger2.di.module;
 import android.app.Activity;
 import android.content.Context;
 
-import com.mindorks.example.android_dagger2_example.di.ActivityContext;
-
 import dagger.Module;
 import dagger.Provides;
+import spandroid.dev.dagger2.di.ActivityContext;
 
 /**
  * Created by janisharali on 08/12/16.

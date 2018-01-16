@@ -4,11 +4,10 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.mindorks.example.android_dagger2_example.di.ApplicationContext;
-import com.mindorks.example.android_dagger2_example.di.DatabaseInfo;
-
 import dagger.Module;
 import dagger.Provides;
+import spandroid.dev.dagger2.di.ApplicationContext;
+import spandroid.dev.dagger2.di.DatabaseInfo;
 
 /**
  * Created by janisharali on 25/12/16.

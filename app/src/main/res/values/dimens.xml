@@ -111,6 +111,9 @@
     <dimen name="dimen_17sp">17sp</dimen>
     <dimen name="dialog_corners">5dp</dimen>
     <dimen name="activity_margin">10dp</dimen>
+    <dimen name="ic_delete">30dp</dimen>
+    <dimen name="padd_10">10dp</dimen>
+    <dimen name="thumbnail">40dp</dimen>
     // for caption
 
 
