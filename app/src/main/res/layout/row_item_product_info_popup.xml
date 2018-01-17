@@ -3,6 +3,7 @@
     android:id="@+id/mLinearLayoutRowInfoRoot"
     android:layout_width="match_parent"
     android:layout_height="25dp"
+    android:layout_margin="@dimen/dimen_10dp"
     android:orientation="horizontal"
     android:paddingLeft="@dimen/dimen_10dp"
     android:paddingStart="@dimen/dimen_10dp">
@@ -11,7 +12,6 @@
         android:id="@+id/mTextViewProductInfoPopUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:gravity="left|start|center_vertical"
         android:maxLines="2"
         android:paddingLeft="@dimen/dimen_5dp"

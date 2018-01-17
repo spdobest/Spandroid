@@ -37,11 +37,11 @@ public class PopupWIndowActivity extends AppCompatActivity implements View.OnCli
 
 
         btn1 = findViewById(R.id.btn1);
-        btn2 = findViewById(R.id.btn1);
-        btn3 = findViewById(R.id.btn1);
-        btn4 = findViewById(R.id.btn1);
-        btn5 = findViewById(R.id.btn1);
-        btn6 = findViewById(R.id.btn1);
+        btn2 = findViewById(R.id.btn2);
+        btn3 = findViewById(R.id.btn3);
+        btn4 = findViewById(R.id.btn4);
+        btn5 = findViewById(R.id.btn5);
+        btn6 = findViewById(R.id.btn6);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
