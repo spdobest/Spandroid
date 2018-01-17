@@ -172,5 +172,10 @@
         <item name="android:windowExitAnimation">@anim/slide_down</item>
     </style>
 
+    <style name="popupWindowAnimation">
+        <item name="@android:windowEnterAnimation">@anim/zoom_in</item>
+        <item name="@android:windowExitAnimation">@anim/zoom_out</item>
+    </style>
+
 
 </resources>

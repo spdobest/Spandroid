@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayoutPopUp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_window_bg"
+    android:gravity="center_vertical">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageviewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:src="@drawable/popup_info_icon" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textviewPopTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_toEndOf="@+id/imageviewInfo"
+        android:layout_toRightOf="@+id/imageviewInfo"
+        android:text="Slow Internet Connection"
+        android:textSize="@dimen/dimen_20sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewPopTitle"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_2dp"
+        android:layout_toEndOf="@+id/imageviewInfo"
+        android:layout_toRightOf="@+id/imageviewInfo"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:text="Switch to other mode for better browsing experience"
+        android:textSize="@dimen/dimen_14sp" />
+
+</RelativeLayout>
