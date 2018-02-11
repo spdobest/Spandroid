@@ -44,11 +44,13 @@ public class ButtomSheetActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buttomsheet);
+
+
         final Toolbar toolbar = findViewById(R.id.gmail_toolbar);
         fabBottomSheet = findViewById(R.id.fabBottomSheet);
         fabBottomSheet.setOnClickListener(this);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = findViewById(R.id.gmail_list);
 

@@ -11,11 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".LauncherActivity">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
         <activity android:name=".recyclerView.RecyclerViewActivity" />
         <activity android:name=".activity.MyActivity" />
@@ -64,7 +67,9 @@
             android:name=".launchMode.SingleTaskActivity"
             android:label="singleTask launchMode"
             android:launchMode="singleTask" />
-        <activity android:name=".launchMode.SingleTopActivity" />
+        <activity
+            android:name=".launchMode.SingleTopActivity"
+            android:launchMode="singleTop" />
         <activity android:name=".launchMode.StandardActivity" />
         <activity android:name=".launchMode.TaskAffinityActivity" />
         <activity
@@ -73,7 +78,23 @@
         <!-- END LAUNCHER MODES -->
 
         <activity android:name=".kotlin.KotlinActivity" />
-        <activity android:name=".popupwindow.PopupWIndowActivity"></activity>
+        <activity android:name=".popupwindow.PopupWIndowActivity" />
+        <activity android:name=".animation.CircularReavelAnimActivity" />
+        <activity android:name=".rxjava.RxJavaActivity" />
+        <activity
+            android:name=".bottomsheet.ButtomSheetActivity"
+            android:theme="@style/AppThemeNoActionbar">
+
+        </activity>
+        <activity
+            android:name=".bottomsheet.BottomSheetActivity1"
+            android:theme="@style/AppThemeNoActionbar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

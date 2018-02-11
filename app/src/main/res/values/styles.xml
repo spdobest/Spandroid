@@ -335,5 +335,36 @@
         <item name="android:windowExitAnimation">@anim/anim_out_dialogfragment</item>
     </style>
 
+    // FOR ANIMATION
+
+    <style name="AppThemeNew" parent="AppTheme">
+
+        <!-- enable activity transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- enable window content transitions -->
+        <item name="android:windowContentTransitions">true</item>
+
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@transition/custom_animation</item>
+        <item name="android:windowExitTransition">@transition/custom_animation</item>
+
+        <!-- if we don't specify reenter transition, by default exit transition is taken -->
+        <!-- if we don't specify return transition, by default enter transition is taken -->
+
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+
+    </style>
+
+
+    <style name="AppThemeNoActionbar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
 </resources>
