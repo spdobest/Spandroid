@@ -137,4 +137,27 @@ Android 5.0 Lollipop was one of the most significant Android releases ever, in n
     </array>
 
 
+    <string name="title_activity_add">AddActivity</string>
+    <string name="item_name">Item Name</string>
+    <string name="person_name">Person Name</string>
+    <string name="set_date">Set Date</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="search">search</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="transition_search_back" translatable="false">transition_search_back</string>
+    <string name="no_results">No Results</string>
+
+    <string name="example_from_documentation">Example from documentation</string>
+    <string name="rotation_only">Rotation only</string>
+    <string name="path_morph_only">Path morph only</string>
+    <string name="animate">Animate</string>
+
+    <string name="clock">Clock</string>
+
+    <string name="smiling_face">Smiling face</string>
+
+    <string name="fill_in_heart">Fill in heart</string>
+    <string name="love_it">Love it</string>
+
+
 </resources>
