@@ -10,16 +10,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LauncherActivity">
 
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
-        </activity>
+        <activity android:name=".LauncherActivity" />
         <activity android:name=".recyclerView.RecyclerViewActivity" />
         <activity android:name=".activity.MyActivity" />
         <activity android:name=".alarmManager.AlarmActivity" />
@@ -48,9 +55,7 @@
         <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".service.ServiceActivity" />
         <activity android:name=".uiDesign.UiDesignActivity" />
-        <activity android:name=".fragment.MainDesignPatternActivity" />
         <activity android:name=".network.MainNetworkActivity" />
-        <activity android:name=".network.retrofit.AsyncActivity" />
         <activity android:name=".network.retrofit.RetrofitActivity" />
         <activity android:name=".network.volley.VolleyActivity" />
         <activity android:name=".designPartern.mvp.MvpActivity" />
@@ -83,12 +88,32 @@
         <activity android:name=".rxjava.RxJavaActivity" />
         <activity
             android:name=".bottomsheet.ButtomSheetActivity"
-            android:theme="@style/AppThemeNoActionbar">
-
-        </activity>
+            android:theme="@style/AppThemeNoActionbar" />
         <activity
             android:name=".bottomsheet.BottomSheetActivity1"
-            android:theme="@style/AppThemeNoActionbar">
+            android:theme="@style/AppThemeNoActionbar"></activity>
+        <activity android:name=".google_products.GoogleMainActivity" />
+        <activity android:name=".google_products.googleDrive.GoogleDriveActivity">
+
+        </activity>
+
+        <!-- Firebase Notifications -->
+
+        <activity android:name=".google_products.fcm.notifiction.FCMActivity" />
+
+        <service android:name=".google_products.fcm.notifiction.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".google_products.fcm.notifiction.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+
+        <activity android:name=".google_products.googleDrive.GoogleDriveDownloadActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

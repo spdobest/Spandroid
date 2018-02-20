@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "946730317755",
+    "firebase_url": "https://spandroid-195801.firebaseio.com",
+    "project_id": "spandroid-195801",
+    "storage_bucket": "spandroid-195801.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946730317755:android:63c5a85f6be044a3",
+        "android_client_info": {
+          "package_name": "spandroid.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946730317755-p70u9ijbc3qduep3pkvgq8snga2icoit.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "946730317755-4sj28oepbs7fat1fbn6ncjn6h2j724l6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "spandroid.dev",
+            "certificate_hash": "c33ed22755bf1e9d74faa2921453ff8985ac05b9"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvwUdRuV1Caqqdj7gL8fb-a0is8jrr_4I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946730317755-p70u9ijbc3qduep3pkvgq8snga2icoit.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
