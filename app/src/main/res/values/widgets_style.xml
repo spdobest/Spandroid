@@ -90,6 +90,7 @@
 
     <!--EDITTEXT STYLE-->
     <color name="ora">#FFBB33</color>
+    <color name="colorBlack">#000000</color>
 
     <style name="venus">
         <item name="android:textColor">@color/ora</item>
@@ -177,5 +178,333 @@
         <item name="@android:windowExitAnimation">@anim/zoom_out</item>-->
     </style>
 
+
+    <!--******************************  OTHER *******************************-->
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/common_color_toolbar</item>
+        <item name="colorControlHighlight">@color/common_color_toolbar</item>
+    </style>
+
+    <style name="AppDebugTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorDebugPrimary</item>
+        <item name="colorPrimaryDark">@color/colorDebugPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/common_color_toolbar</item>
+        <item name="colorControlHighlight">@color/common_color_toolbar</item>
+    </style>
+
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/common_color_toolbar</item>
+        <item name="colorControlHighlight">@color/common_color_toolbar</item>
+        <item name="actionBarSize">46dp</item>
+        <item name="android:actionBarSize">46dp</item>
+    </style>
+    &lt;!&ndash;BUTTON STYLE&ndash;&gt;
+    <style name="crafts_buttonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@drawable/button_textcolor_selector</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:alpha">0.87</item>
+        &lt;!&ndash;<item name="android:opacity">12</item>&ndash;&gt;
+    </style>-->
+
+    <!--TEXTVIEW STYLE-->
+    <style name="crafts_bodyTextStyle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+        <!--<item name="android:opacity">12</item>-->
+    </style>
+
+    <style name="crafts_bodyBoldTextStyle" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+        <item name="android:textStyle">bold</item>
+        <!--<item name="android:opacity">12</item>-->
+    </style>
+
+    <style name="crafts_catptionTextStyle" parent="Base.TextAppearance.AppCompat.Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dimen_12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:alpha">0.54</item>
+        <!--<item name="android:opacity">12</item>-->
+    </style>
+
+    <!--TEXTVIEW STYLE-->
+    <style name="crafts_styleEdittext" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:maxLines">1</item>
+        <!--<item name="android:gravity" >center</item>-->
+        <!--<item name="android:opacity">12</item>-->
+    </style>
+
+    <style name="crafts_buttonStyle1" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/color_white</item>
+        <!-- <item name="android:background">@color/color_button</item>-->
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:alpha">0.87</item>
+
+        <!--<item name="android:opacity">12</item>-->
+    </style>
+
+
+    <!-- <style name="StyledTilEditTextFloatingLabel" parent="TextAppearance.AppCompat.Large">
+         <item name="android:textColor">@color/color_gray</item>
+         <item name="android:textSize">@dimen/dimen_14sp</item>
+         <item name="android:textStyle">bold</item>
+     </style>-->
+
+    <style name="StyledTilEditTextFloatingLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+        <item name="android:textColor">@color/color_gray</item>
+        <item name="android:textColorHint">@color/color_gray</item>
+        <item name="colorAccent">@color/color_gray</item>
+        <item name="colorControlNormal">@color/color_gray</item>
+        <item name="colorControlActivated">@color/color_gray</item>
+
+    </style>
+
+    <style name="MaterialDialogSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/pop_up</item>
+        <item name="android:windowExitAnimation">@anim/pop_down</item>
+    </style>
+
+    <!-- <style name="Widget.Design.TextInputLayout" parent="AppTheme">
+         <item name="hintTextAppearance">@style/StyledTilEditTextFloatingLabel</item>
+         &lt;!&ndash;<item name="errorTextAppearance">@style/AppTheme.TextErrorAppearance</item>&ndash;&gt;
+         <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
+         <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
+     </style>-->
+
+
+    <style name="TextInputLayout" parent="TextAppearance.AppCompat">
+
+        <item name="android:textColor">@color/color_gray</item>
+        <item name="colorControlNormal">@color/color_1f000000</item>
+        <item name="colorControlActivated">@color/color_1f000000</item>
+        <item name="colorControlHighlight">@color/color_1f000000</item>
+
+    </style>
+
+    <!--BUTTON STYLE-->
+    <!-- <style name="crafts_buttonStyle_green" parent="Base.Widget.AppCompat.Button">
+         <item name="android:background">@drawable/button_green_selector</item>
+         <item name="android:paddingLeft">@dimen/dimen_16dp</item>
+         <item name="android:paddingRight">@dimen/dimen_16dp</item>
+         <item name="android:gravity">center</item>
+         <item name="android:stateListAnimator" tools:targetApi="lollipop">@null</item>
+         <item name="android:textColor">@color/colorPrimary</item>
+         <item name="android:textSize">@dimen/dimen_16sp</item>
+         <item name="android:textStyle">bold</item>
+     </style>-->
+
+    <!--BUTTON STYLE-->
+    <!-- <style name="crafts_buttonStyle_red" parent="Widget.AppCompat.Button">
+         <item name="android:background">@drawable/button_red_selector</item>
+         <item name="android:paddingLeft">@dimen/dimen_16dp</item>
+         <item name="android:paddingRight">@dimen/dimen_16dp</item>
+         <item name="android:gravity">center</item>
+         <item name="android:textColor">@color/colorPrimary</item>
+         <item name="android:textSize">@dimen/dimen_16sp</item>
+         &lt;!&ndash;<item name="android:elevation">@dimen/dimen_2dp</item>&ndash;&gt;
+         &lt;!&ndash;<item name="android:opacity">12</item>&ndash;&gt;
+     </style>-->
+
+
+    <!--GOOGLE BUTTON STYLE-->
+    <!--<style name="crafts_google_btn_style" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_google_selector</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        &lt;!&ndash;<item name="android:opacity">12</item>&ndash;&gt;
+    </style>-->
+
+    <!--FACEBOOK BUTTON STYLE-->
+    <!--<style name="crafts_facebook_btn_style" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_facebook_selector</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        &lt;!&ndash;<item name="android:opacity">12</item>&ndash;&gt;
+    </style>-->
+
+    <!--STYLE FOR TOOLBAR-->
+    <style name="crafts_toolbar_style" parent="Base.Theme.AppCompat.Light">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:background">@drawable/toolbar_bg_prelolipop</item>
+    </style>
+
+    <!--FAB STYLE-->
+    <style name="crafts_fab_style" parent="android:Widget.Material.Button">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:elevation">@dimen/dimen_4dp</item>
+    </style>
+
+    <style name="TransparentDialogTheme" parent="android:Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@android:color/transparent</item>
+        <item name="android:bottomDark">@android:color/transparent</item>
+        <item name="android:bottomMedium">@android:color/transparent</item>
+        <item name="android:centerBright">@android:color/transparent</item>
+        <item name="android:centerDark">@android:color/transparent</item>
+        <item name="android:centerMedium">@android:color/transparent</item>
+        <item name="android:fullBright">@android:color/transparent</item>
+        <item name="android:fullDark">@android:color/transparent</item>
+        <item name="android:topBright">@android:color/transparent</item>
+        <item name="android:topDark">@android:color/transparent</item>
+    </style>
+
+
+    <style name="MdToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+
+    </style>
+
+    <style name="AppStyle.MdToolbar" parent="MdToolbar"></style>
+
+    <!--RADIO BUTTON STYLE-->
+    <!--<style name="crafts_radio_button" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/drawable_radio_button</item>
+    </style>-->
+
+    <!--FLOATING HINT TEXT STYLE-->
+    <style name="crafts_hint_style" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/color_8c000000</item>
+        <item name="android:textStyle">bold</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/color_1f000000</item>
+        <item name="colorControlNormal">@color/color_1f000000</item>
+        <item name="colorControlActivated">@color/color_1f000000</item>
+    </style>
+
+    <style name="checkboxStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/color_1f000000</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+
+
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">500dp</item>
+    </style>
+
+    <style name="edittextStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="TextLabel" parent="android:Widget.TextView">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/color_8a000000</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/color_8a000000</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorBlack</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+
+    <style name="selectAbleItemTheme">
+        <item name="android:colorControlHighlight">#CFCFCF</item>
+    </style>
+
+    <style name="SelectableItemBackground">
+        <item name="android:theme">@style/selectAbleItemTheme</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="selectAbleItemForHeader">
+        <item name="android:colorControlHighlight">#790924</item>
+    </style>
+
+    <style name="SelectableItemBackgroundForHeader">
+        <item name="android:theme">@style/selectAbleItemForHeader</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="selectAbleItemThemeWithBorder">
+        <item name="android:colorControlHighlight">#CFCFCF</item>
+    </style>
+
+    <style name="SelectableItemBackgroundWithBorder">
+        <item name="android:theme">@style/selectAbleItemThemeWithBorder</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="selectAbleItemThemeWithBorderForImage">
+        <item name="android:colorControlHighlight">#CFCFCF</item>
+    </style>
+
+    <style name="SelectableItemBackgroundWithBorderForImage">
+        <item name="android:theme">@style/selectAbleItemThemeWithBorderForImage</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+
+    </style>
+
+    <style name="HorizontalMargin16">
+        <item name="android:layout_marginLeft">@dimen/dimen_16dp</item>
+        <item name="android:layout_marginRight">@dimen/dimen_16dp</item>
+
+    </style>
+
+    <style name="PhotoGridLayout">
+        <item name="android:drawSelectorOnTop">true</item>
+        <item name="android:listSelector">@drawable/photogrid_list_selector</item>
+    </style>
 
 </resources>

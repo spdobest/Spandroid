@@ -367,4 +367,6 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppThemeDark.FullScreen" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+
 </resources>

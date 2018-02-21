@@ -61,8 +61,6 @@ public class SlideViewPagerAdapter extends PagerAdapter {
         ImageView imageView = layout.findViewById(R.id.mImageViewPager);
         Glide.with(context)
                 .load(data.get(position % data.size()).getUrl())
-                .placeholder(R.mipmap.ic_launcher) // optional
-                .error(R.drawable.ic_launcher)         // optional
                 .into(imageView);
         container.addView(layout);
 

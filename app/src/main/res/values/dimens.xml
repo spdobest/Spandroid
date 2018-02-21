@@ -114,6 +114,11 @@
     <dimen name="ic_delete">30dp</dimen>
     <dimen name="padd_10">10dp</dimen>
     <dimen name="thumbnail">40dp</dimen>
+    <dimen name="dimen_160dp">160dp</dimen>
+    <dimen name="horizontal_page_margin">10dp</dimen>
+    <dimen name="image_thumbnail_size">100dp</dimen>
+    <dimen name="image_thumbnail_spacing">1dp</dimen>
+
     // for caption
 
 

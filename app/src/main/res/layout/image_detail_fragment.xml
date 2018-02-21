@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright (C) 2012 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/imageview_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/empty_photo" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageViewWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="@dimen/padd_10"
+            android:contentDescription="@string/imageview_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/empty_photo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btmBar"
+            android:layout_gravity="bottom">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnPicaso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Picaso" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnGLide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GLide" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnUniversal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Universal" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btmBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnCenterCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="centerCrop" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnCenterInside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="centerInside" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnFitCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="fitCenter" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnfitXy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="fitXy" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -171,6 +171,10 @@
 
     <!-- search -->
     <color name="search_background_scrim">#33000000</color>
-
+    <color name="color_1f000000">#1f000000</color>
+    <color name="color_8c000000">#8c000000</color>
+    <color name="color_white">#ffffff</color>
+    <color name="grid_state_pressed">#1Affffff</color>
+    <color name="grid_state_focused">#80000000</color>
 
 </resources>

@@ -301,6 +301,9 @@ public class GoogleDriveDownloadActivity extends AppCompatActivity implements Go
                     String id = mFileId.getResourceId();
 
                     String url = "https://docs.google.com/file/d/" + id;
+
+                    new DownloadTask(GoogleDriveDownloadActivity.this, url);
+
                     Intent i = new Intent(Intent.ACTION_VIEW);
                     i.setData(Uri.parse(url));
                     startActivity(i);
