@@ -88,9 +88,6 @@
         <item name="android:background">@drawable/edittext_group_bg_single</item>
     </style>
 
-    <!--EDITTEXT STYLE-->
-    <color name="ora">#FFBB33</color>
-    <color name="colorBlack">#000000</color>
 
     <style name="venus">
         <item name="android:textColor">@color/ora</item>

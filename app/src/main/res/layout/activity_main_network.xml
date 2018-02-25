@@ -1,10 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#d3d3d3"
+    android:orientation="vertical"
     tools:context="spandroid.dev.network.MainNetworkActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvVolley"
+            style="@style/layoutStyle_wrap"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_rounded_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Volley" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvRetrofit"
+            style="@style/layoutStyle_wrap"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_rounded_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Retrofit" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvAsync"
+            style="@style/layoutStyle_wrap"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_rounded_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Async" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvVolleyTime"
+            style="@style/layoutStyle_wrap"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_rounded_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Time" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvRetrofitTime"
+            style="@style/layoutStyle_wrap"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_rounded_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Retrofit Time" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvAsyncTime"
+            style="@style/layoutStyle_wrap"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_rounded_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Async Time" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewNetwork"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:padding="@dimen/padd_10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvVolley_activity"
+            style="@style/layoutStyle_wrap"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_rounded_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Volley Screen" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvRetrofit_activity"
+            style="@style/layoutStyle_wrap"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_rounded_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Retrofit Screen" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvAsync_activity"
+            style="@style/layoutStyle_wrap"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_rounded_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Async Screen" />
+
+    </LinearLayout>
+
+</LinearLayout>

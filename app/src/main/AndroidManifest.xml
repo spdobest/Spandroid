@@ -2,11 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="spandroid.dev">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
 
     <application
         android:name=".app.SpandroidApplication"
@@ -61,9 +59,7 @@
         <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".service.ServiceActivity" />
         <activity android:name=".uiDesign.UiDesignActivity" />
-        <activity android:name=".network.MainNetworkActivity" />
-        <activity android:name=".network.retrofit.RetrofitActivity" />
-        <activity android:name=".network.volley.VolleyActivity" />
+
         <activity android:name=".designPartern.mvp.MvpActivity" />
         <activity android:name=".designPartern.mvvm.MvvmActivity" />
         <activity android:name=".designPartern.observer.ObservableActivity" />
@@ -99,7 +95,7 @@
             android:name=".bottomsheet.BottomSheetActivity1"
             android:theme="@style/AppThemeNoActionbar" />
         <activity android:name=".google_products.GoogleMainActivity" />
-        <activity android:name=".google_products.googleDrive.GoogleDriveActivity"></activity>
+        <activity android:name=".google_products.googleDrive.GoogleDriveActivity" />
 
         <!-- Firebase Notifications -->
 
@@ -118,33 +114,42 @@
         <!-- ./Firebase Notifications -->
 
         <activity android:name=".google_products.googleDrive.GoogleDriveDownloadActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>-->
         </activity>
-        <activity android:name=".imageLoading.ImageLoadingMainActivity"></activity>
+        <activity android:name=".imageLoading.ImageLoadingMainActivity" />
         <activity
             android:name=".imageLoading.ImageGridActivity"
             android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
 
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>-->
+        </activity>
         <activity
             android:name=".imageLoading.ImageDetailActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".imageLoading.ImageGridActivity"
-
-            >
+            android:parentActivityName=".imageLoading.ImageGridActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".imageLoading.ImageGridActivity" />
         </activity>
+        <activity android:name=".z_kotlin.DetailActivityKotlin" />
+        <activity android:name=".network.volley.VolleyMainActivity" />
+        <activity android:name=".network.MainNetworkActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".network.retrofit.RetrofitMainActivity">
+
+        </activity>
     </application>
 
 </manifest>

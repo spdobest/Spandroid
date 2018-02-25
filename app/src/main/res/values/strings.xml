@@ -166,5 +166,7 @@ Android 5.0 Lollipop was one of the most significant Android releases ever, in n
     <string name="clear_cache_menu">Clear Caches</string>
     <string name="clear_cache_complete_toast">Caches have been cleared</string>
     <string name="imageview_description">Image Thumbnail</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="ok">Ok</string>
 
 </resources>
