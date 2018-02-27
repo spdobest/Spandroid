@@ -25,6 +25,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import spandroid.dev.R;
+import spandroid.dev.managers.AnalyticsManager;
 import spandroid.dev.network.adapter.NetworkRecyclerAdapter;
 import spandroid.dev.network.async.HttpHandler;
 import spandroid.dev.network.retrofit.APiService;
@@ -82,6 +83,8 @@ public class MainNetworkActivity extends AppCompatActivity {
                 LinearLayoutManager.VERTICAL, false));
         networkRecyclerAdapter = new NetworkRecyclerAdapter(listMovies, MainNetworkActivity.this);
         recyclerViewNetwork.setAdapter(networkRecyclerAdapter);
+
+        AnalyticsManager.aboutUs(MainNetworkActivity.this);
 
 
     }

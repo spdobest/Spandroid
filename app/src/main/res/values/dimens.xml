@@ -118,6 +118,7 @@
     <dimen name="horizontal_page_margin">10dp</dimen>
     <dimen name="image_thumbnail_size">100dp</dimen>
     <dimen name="image_thumbnail_spacing">1dp</dimen>
+    <dimen name="dimen_70dp">70dp</dimen>
 
     // for caption
 
