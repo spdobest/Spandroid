@@ -87,7 +87,13 @@
             android:taskAffinity="" />
         <!-- END LAUNCHER MODES -->
 
-        <activity android:name=".kotlin.KotlinActivity" />
+        <activity android:name=".kotlin.KotlinActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".popupwindow.PopupWIndowActivity" />
         <activity android:name=".animation.CircularReavelAnimActivity" />
         <activity android:name=".rxjava.RxJavaActivity" />
@@ -156,7 +162,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".network.retrofit.RetrofitMainActivity"></activity>
+        <activity android:name=".network.retrofit.RetrofitMainActivity" />
         FOR ANALYTICS
         <!--  -->
         <service
@@ -173,18 +179,15 @@
             </intent-filter>
         </receiver>
         <!-- end EVENTS -->
-        <activity android:name=".recyclerView.multilevel.MultiLevelRecyclerViewActivity">
+        <activity android:name=".recyclerView.multilevel.MultiLevelRecyclerViewActivity"></activity>
+        <activity android:name=".recyclerView.loadmore_dragdrop.LoadMoreAndDragDropRecyclerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".recyclerView.loadmore.RecyclerViewActivity">
-
-        </activity>
-
+        <activity android:name=".network.retrofit.retrofit_auth.RetrofitAuthActivity"></activity>
     </application>
 
 </manifest>

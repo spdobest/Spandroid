@@ -122,5 +122,7 @@
 
     // for caption
 
+    <dimen name="activity_padding_horizontal">16dp</dimen>
+
 
 </resources>

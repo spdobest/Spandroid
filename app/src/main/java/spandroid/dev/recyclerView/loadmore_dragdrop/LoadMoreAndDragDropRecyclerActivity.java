@@ -1,4 +1,4 @@
-package spandroid.dev.recyclerView.loadmore;
+package spandroid.dev.recyclerView.loadmore_dragdrop;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,16 +7,18 @@ import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import spandroid.dev.R;
 
-public class RecyclerViewActivity extends AppCompatActivity {
+public class LoadMoreAndDragDropRecyclerActivity extends AppCompatActivity {
 
     RecyclerView recyclerViewLoadMore;
     AppCompatEditText editSearch;
@@ -28,7 +30,28 @@ public class RecyclerViewActivity extends AppCompatActivity {
     GridLayoutManager gridLayoutManager;
 
     int firstPosition = 0;
+    ItemTouchHelper.Callback _ithCallback = new ItemTouchHelper.Callback() {
+        //and in your imlpementaion of
+        public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+            // get the viewHolder's and target's positions in your adapter data, swap them
+            Collections.swap(listProducts, viewHolder.getAdapterPosition(), target.getAdapterPosition());
+            // and notify the adapter that its dataset has changed
+            loadMoreRecyclerAdapter.notifyItemMoved(viewHolder.getAdapterPosition(), target.getAdapterPosition());
+            return true;
+        }
 
+        @Override
+        public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+            //TODO
+        }
+
+        //defines the enabled move directions in each state (idle, swiping, dragging).
+        @Override
+        public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+            return makeFlag(ItemTouchHelper.ACTION_STATE_DRAG,
+                    ItemTouchHelper.DOWN | ItemTouchHelper.UP | ItemTouchHelper.START | ItemTouchHelper.END);
+        }
+    };
 
     @Override
     protected void onResume() {
@@ -50,9 +73,12 @@ public class RecyclerViewActivity extends AppCompatActivity {
         }
 
         loadMoreRecyclerAdapter = new LoadMoreRecyclerAdapter(listProducts);
-        gridLayoutManager = new GridLayoutManager(RecyclerViewActivity.this, 2, LinearLayoutManager.VERTICAL, false);
+        gridLayoutManager = new GridLayoutManager(LoadMoreAndDragDropRecyclerActivity.this, 2, LinearLayoutManager.VERTICAL, false);
         recyclerViewLoadMore.setLayoutManager(gridLayoutManager);
         recyclerViewLoadMore.setAdapter(loadMoreRecyclerAdapter);
+
+        setDragAndDrop();
+
         recyclerViewLoadMore.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -98,6 +124,14 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void setDragAndDrop() {
+        // Create an `ItemTouchHelper` and attach it to the `RecyclerView`
+        ItemTouchHelper ith = new ItemTouchHelper(_ithCallback);
+        ith.attachToRecyclerView(recyclerViewLoadMore);
+
+// Extend the Callback class
 
 
     }
