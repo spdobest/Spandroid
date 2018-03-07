@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".app.SpandroidApplication"
@@ -88,11 +89,14 @@
         <!-- END LAUNCHER MODES -->
 
         <activity android:name=".kotlin.KotlinActivity">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
         <activity android:name=".popupwindow.PopupWIndowActivity" />
         <activity android:name=".animation.CircularReavelAnimActivity" />
@@ -153,14 +157,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".imageLoading.ImageGridActivity" />
         </activity>
-        <activity android:name=".z_kotlin.DetailActivityKotlin" />
         <activity android:name=".network.volley.VolleyMainActivity" />
         <activity android:name=".network.MainNetworkActivity">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
         <activity android:name=".network.retrofit.RetrofitMainActivity" />
         FOR ANALYTICS
@@ -179,15 +185,28 @@
             </intent-filter>
         </receiver>
         <!-- end EVENTS -->
-        <activity android:name=".recyclerView.multilevel.MultiLevelRecyclerViewActivity"></activity>
-        <activity android:name=".recyclerView.loadmore_dragdrop.LoadMoreAndDragDropRecyclerActivity">
+        <activity android:name=".recyclerView.multilevel.MultiLevelRecyclerViewActivity" />
+        <activity android:name=".recyclerView.loadmore_dragdrop.LoadMoreAndDragDropRecyclerActivity"></activity>
+        <activity android:name=".network.retrofit.retrofit_auth.RetrofitAuthActivity" />
+        <activity android:name=".phoneManager.PhoneDetailsActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <!-- KOTLIN -->
+        <activity android:name=".z_kotlin.DetailActivityKotlin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".network.retrofit.retrofit_auth.RetrofitAuthActivity"></activity>
     </application>
 
 </manifest>
