@@ -87,6 +87,11 @@ dependencies {
     // volley
     compile 'com.android.volley:volley:1.1.0'
     compile "com.google.android.gms:play-services-gcm:11.6.0"
+    // ==============  KOTLIN =======================
+    compile "org.jetbrains.anko:anko-common:$anko_version"
+    compile "org.jetbrains.anko:anko-sqlite:$anko_version"
+    compile "org.jetbrains.anko:anko-coroutines:$anko_version"
+
 
 }
 apply plugin: 'com.google.gms.google-services'

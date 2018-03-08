@@ -201,12 +201,26 @@
 
         <!-- KOTLIN -->
         <activity android:name=".z_kotlin.DetailActivityKotlin">
+
+        </activity>
+
+
+        <activity
+            android:name=".kotlin.weatherApp.ui.activities.MainActivity"
+            android:theme="@style/AppThemeWeather">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".kotlin.weatherApp.ui.activities.SettingsActivity"
+            android:theme="@style/AppThemeWeather" />
+        <activity
+            android:name=".kotlin.weatherApp.ui.activities.DetailActivity"
+            android:theme="@style/AppThemeWeather" />
+
     </application>
 
 </manifest>

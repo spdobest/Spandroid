@@ -9,6 +9,12 @@
 
     </style>
 
+    <!-- Base application theme. -->
+    <style name="AppThemeWeather" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#ff212121</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+    </style>
+
     <style name="ThemeSplash" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
