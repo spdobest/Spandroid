@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutRootBaseKotlin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="spandroid.dev.kotlin.base.BaseKotlinFragment">
+
+
+    <ProgressBar
+        android:id="@+id/progressBaseFragment"
+        android:layout_width="@dimen/dimen_50dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/progress_bg_drawable"
+        android:padding="@dimen/dimen_5dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvMessageBaseFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_50dp"
+        android:text="Loading" />
+
+
+</FrameLayout>

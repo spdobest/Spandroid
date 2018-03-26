@@ -1,4 +1,4 @@
-package spandroid.dev.kotlin.weatherApp.ui.activities
+package spandroid.dev.kotlin.weather_forecast.weatherApp.ui.activities
 
 import android.support.v7.graphics.drawable.DrawerArrowDrawable
 import android.support.v7.widget.RecyclerView

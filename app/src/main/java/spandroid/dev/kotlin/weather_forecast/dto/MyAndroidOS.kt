@@ -1,4 +1,4 @@
-package spandroid.dev.kotlin.dto
+package spandroid.dev.kotlin.weather_forecast.dto
 
 /**
  * Created by sibaprasad on 09/03/18.

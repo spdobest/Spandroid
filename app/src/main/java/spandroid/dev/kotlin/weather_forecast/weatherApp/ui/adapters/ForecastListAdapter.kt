@@ -1,4 +1,4 @@
-package spandroid.dev.kotlin.weatherApp.ui.adapters
+package spandroid.dev.kotlin.weather_forecast.weatherApp.ui.adapters
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater

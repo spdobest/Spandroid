@@ -1,11 +1,11 @@
 package spandroid.dev.styles;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import spandroid.dev.R;
 
-public class StlesActivity extends AppCompatActivity {
+public class StylesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

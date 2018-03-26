@@ -1,4 +1,4 @@
-package spandroid.dev.kotlin.weatherApp.ui.activities
+package spandroid.dev.kotlin.weather_forecast.weatherApp.ui.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -14,7 +14,7 @@ import org.jetbrains.anko.coroutines.experimental.bg
 import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
 import spandroid.dev.R
-import spandroid.dev.kotlin.weatherApp.ui.adapters.ForecastListAdapter
+import spandroid.dev.kotlin.weather_forecast.weatherApp.ui.adapters.ForecastListAdapter
 
 class MainActivity : AppCompatActivity(), ToolbarManager {
 

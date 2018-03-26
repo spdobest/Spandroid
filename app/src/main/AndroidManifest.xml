@@ -60,7 +60,7 @@
         <activity android:name=".room.RoomActivity" />
         <activity android:name=".runtimePermission.RuntimePermissionActivity" />
         <activity android:name=".security.SecurityActivity" />
-        <activity android:name=".styles.StlesActivity" />
+        <activity android:name=".styles.StylesActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".service.ServiceActivity" />
         <activity android:name=".uiDesign.UiDesignActivity" />
@@ -206,7 +206,7 @@
 
 
         <activity
-            android:name=".kotlin.weatherApp.ui.activities.MainActivity"
+            android:name="spandroid.dev.kotlin.weather_forecast.weatherApp.ui.activities.MainActivity"
             android:theme="@style/AppThemeWeather">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -215,10 +215,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".kotlin.weatherApp.ui.activities.SettingsActivity"
+            android:name="spandroid.dev.kotlin.weather_forecast.weatherApp.ui.activities.SettingsActivity"
             android:theme="@style/AppThemeWeather" />
         <activity
-            android:name=".kotlin.weatherApp.ui.activities.DetailActivity"
+            android:name="spandroid.dev.kotlin.weather_forecast.weatherApp.ui.activities.DetailActivity"
             android:theme="@style/AppThemeWeather" />
 
     </application>

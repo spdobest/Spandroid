@@ -1,4 +1,4 @@
-package spandroid.dev.kotlin.weatherApp.ui.activities
+package spandroid.dev.kotlin.weather_forecast.weatherApp.ui.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
