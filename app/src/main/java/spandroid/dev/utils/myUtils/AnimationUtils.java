@@ -276,4 +276,7 @@ public final class AnimationUtils {
         return getAmplificationAnimation(DEFAULT_ANIMATION_DURATION, animationListener);
     }
 
+
+
+
 }

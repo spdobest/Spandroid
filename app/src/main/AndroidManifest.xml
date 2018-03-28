@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="spandroid.dev">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="spandroid.dev">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
         android:name=".app.SpandroidApplication"
@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="firebase_analytics_collection_deactivated"
-            android:value="true" />
+            android:value="true"/>
 
         <!--
      Set custom default icon. This is used when no icon is set for incoming notification messages.
@@ -26,66 +26,72 @@
         -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@mipmap/ic_launcher" />
+            android:resource="@mipmap/ic_launcher"/>
         <!--
              Set color used with incoming notification messages. This is used when no color is set for the incoming
              notification message. See README(https://goo.gl/6BKBk7) for more.
         -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorAccent" />
+            android:resource="@color/colorAccent"/>
 
-        <activity android:name=".LauncherActivity" />
-        <activity android:name=".recyclerView.RecyclerViewActivity" />
-        <activity android:name=".activity.MyActivity" />
-        <activity android:name=".alarmManager.AlarmActivity" />
-        <activity android:name=".android5.Android5Activity" />
-        <activity android:name=".android6.Android6Activity" />
-        <activity android:name=".android7.Android7Activity" />
-        <activity android:name=".android8.Android8Activity" />
-        <activity android:name=".animation.AnimationActivity" />
-        <activity android:name=".base.BaseActivity" />
-        <activity android:name=".bindedService.BindServiceActivity" />
-        <activity android:name=".BitmapMemoryMngmt.BitmapMemoryMngmtActivity" />
-        <activity android:name=".broadcastReciever.BroadcastActivity" />
-        <activity android:name=".fragment.FragmentMainActivity" />
-        <activity android:name=".handlerThread.HandlerThreadActivity" />
-        <activity android:name=".intentService.IntentServiceActivity" />
-        <activity android:name=".jobSchedulers.JobSchedulerActivity" />
-        <activity android:name=".liveData.LiveDataActivity" />
-        <activity android:name=".memoryMngmt.MemoryMngmtActivity" />
-        <activity android:name=".myMaps.MyGoogleMapActivity" />
-        <activity android:name=".performance.PerformanceActivity" />
-        <activity android:name=".readAndWriteOperation_pdf_excel.ReaderAndWriterActivity" />
-        <activity android:name=".room.RoomActivity" />
-        <activity android:name=".runtimePermission.RuntimePermissionActivity" />
-        <activity android:name=".security.SecurityActivity" />
-        <activity android:name=".styles.StylesActivity" />
-        <activity android:name=".viewpager.ViewPagerActivity" />
-        <activity android:name=".service.ServiceActivity" />
-        <activity android:name=".uiDesign.UiDesignActivity" />
-        <activity android:name=".designPartern.mvp.MvpActivity" />
-        <activity android:name=".designPartern.mvvm.MvvmActivity" />
-        <activity android:name=".designPartern.observer.ObservableActivity" />
-        <activity android:name=".designPartern.mvc.MVCActivity" />
-        <activity android:name=".contentProv.ContentProviderActivity" />
-        <activity android:name=".dagger2.Dagger2Activity" />
-        <activity android:name=".eventBus.EventBusActivity" />
+        <activity android:name=".LauncherActivity"/>
+        <activity android:name=".recyclerView.RecyclerViewActivity"/>
+        <activity android:name=".activity.MyActivity"/>
+        <activity android:name=".alarmManager.AlarmActivity"/>
+        <activity android:name=".android5.Android5Activity"/>
+        <activity android:name=".android6.Android6Activity"/>
+        <activity android:name=".android7.Android7Activity"/>
+        <activity android:name=".android8.Android8Activity"/>
+        <activity android:name=".animation.AnimationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".base.BaseActivity"/>
+        <activity android:name=".bindedService.BindServiceActivity"/>
+        <activity android:name=".BitmapMemoryMngmt.BitmapMemoryMngmtActivity"/>
+        <activity android:name=".broadcastReciever.BroadcastActivity"/>
+        <activity android:name=".fragment.FragmentMainActivity"/>
+        <activity android:name=".handlerThread.HandlerThreadActivity"/>
+        <activity android:name=".intentService.IntentServiceActivity"/>
+        <activity android:name=".jobSchedulers.JobSchedulerActivity"/>
+        <activity android:name=".liveData.LiveDataActivity"/>
+        <activity android:name=".memoryMngmt.MemoryMngmtActivity"/>
+        <activity android:name=".myMaps.MyGoogleMapActivity"/>
+        <activity android:name=".performance.PerformanceActivity"/>
+        <activity android:name=".readAndWriteOperation_pdf_excel.ReaderAndWriterActivity"/>
+        <activity android:name=".room.RoomActivity"/>
+        <activity android:name=".runtimePermission.RuntimePermissionActivity"/>
+        <activity android:name=".security.SecurityActivity"/>
+        <activity android:name=".styles.StylesActivity"/>
+        <activity android:name=".viewpager.ViewPagerActivity"/>
+        <activity android:name=".service.ServiceActivity"/>
+        <activity android:name=".uiDesign.UiDesignActivity"/>
+        <activity android:name=".designPartern.mvp.MvpActivity"/>
+        <activity android:name=".designPartern.mvvm.MvvmActivity"/>
+        <activity android:name=".designPartern.observer.ObservableActivity"/>
+        <activity android:name=".designPartern.mvc.MVCActivity"/>
+        <activity android:name=".contentProv.ContentProviderActivity"/>
+        <activity android:name=".dagger2.Dagger2Activity"/>
+        <activity android:name=".eventBus.EventBusActivity"/>
 
         <!-- LAUNCHER MODES -->
-        <activity android:name=".launchMode.LaunchModeActivity" />
+        <activity android:name=".launchMode.LaunchModeActivity"/>
         <activity
             android:name=".launchMode.SingleTaskActivity"
             android:label="singleTask launchMode"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTask"/>
         <activity
             android:name=".launchMode.SingleTopActivity"
-            android:launchMode="singleTop" />
-        <activity android:name=".launchMode.StandardActivity" />
-        <activity android:name=".launchMode.TaskAffinityActivity" />
+            android:launchMode="singleTop"/>
+        <activity android:name=".launchMode.StandardActivity"/>
+        <activity android:name=".launchMode.TaskAffinityActivity"/>
         <activity
             android:name=".launchMode.SingleInstanceActivity"
-            android:taskAffinity="" />
+            android:taskAffinity=""/>
         <!-- END LAUNCHER MODES -->
 
         <activity android:name=".kotlin.KotlinActivity">
@@ -98,30 +104,30 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".popupwindow.PopupWIndowActivity" />
-        <activity android:name=".animation.CircularReavelAnimActivity" />
-        <activity android:name=".rxjava.RxJavaActivity" />
+        <activity android:name=".popupwindow.PopupWIndowActivity"/>
+        <activity android:name=".animation.CircularReavelAnimActivity"/>
+        <activity android:name=".rxjava.RxJavaActivity"/>
         <activity
             android:name=".bottomsheet.ButtomSheetActivity"
-            android:theme="@style/AppThemeNoActionbar" />
+            android:theme="@style/AppThemeNoActionbar"/>
         <activity
             android:name=".bottomsheet.BottomSheetActivity1"
-            android:theme="@style/AppThemeNoActionbar" />
-        <activity android:name=".google_products.GoogleMainActivity" />
-        <activity android:name=".google_products.googleDrive.GoogleDriveActivity" />
+            android:theme="@style/AppThemeNoActionbar"/>
+        <activity android:name=".google_products.GoogleMainActivity"/>
+        <activity android:name=".google_products.googleDrive.GoogleDriveActivity"/>
 
         <!-- Firebase Notifications -->
 
-        <activity android:name=".google_products.fcm.notifiction.FCMActivity" />
+        <activity android:name=".google_products.fcm.notifiction.FCMActivity"/>
 
         <service android:name=".google_products.fcm.notifiction.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
         <service android:name=".google_products.fcm.notifiction.MyFirebaseInstanceIDService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
         </service>
         <!-- ./Firebase Notifications -->
@@ -136,7 +142,7 @@
              </intent-filter>
             -->
         </activity>
-        <activity android:name=".imageLoading.ImageLoadingMainActivity" />
+        <activity android:name=".imageLoading.ImageLoadingMainActivity"/>
         <activity
             android:name=".imageLoading.ImageGridActivity"
             android:label="@string/app_name">
@@ -155,9 +161,9 @@
             android:parentActivityName=".imageLoading.ImageGridActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".imageLoading.ImageGridActivity" />
+                android:value=".imageLoading.ImageGridActivity"/>
         </activity>
-        <activity android:name=".network.volley.VolleyMainActivity" />
+        <activity android:name=".network.volley.VolleyMainActivity"/>
         <activity android:name=".network.MainNetworkActivity">
 
             <!--
@@ -168,26 +174,26 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".network.retrofit.RetrofitMainActivity" />
+        <activity android:name=".network.retrofit.RetrofitMainActivity"/>
         FOR ANALYTICS
         <!--  -->
         <service
             android:name="com.google.android.gms.measurement.AppMeasurementService"
             android:enabled="true"
             android:exported="false"
-            tools:node="replace" />
+            tools:node="replace"/>
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true">
             <intent-filter>
-                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
             </intent-filter>
         </receiver>
         <!-- end EVENTS -->
-        <activity android:name=".recyclerView.multilevel.MultiLevelRecyclerViewActivity" />
-        <activity android:name=".recyclerView.loadmore_dragdrop.LoadMoreAndDragDropRecyclerActivity"></activity>
-        <activity android:name=".network.retrofit.retrofit_auth.RetrofitAuthActivity" />
+        <activity android:name=".recyclerView.multilevel.MultiLevelRecyclerViewActivity"/>
+        <activity android:name=".recyclerView.loadmore_dragdrop.LoadMoreAndDragDropRecyclerActivity"/>
+        <activity android:name=".network.retrofit.retrofit_auth.RetrofitAuthActivity"/>
         <activity android:name=".phoneManager.PhoneDetailsActivity">
 
             <!--
@@ -198,29 +204,23 @@
             </intent-filter>
             -->
         </activity>
-
-        <!-- KOTLIN -->
-        <activity android:name=".z_kotlin.DetailActivityKotlin">
-
-        </activity>
-
-
         <activity
-            android:name="spandroid.dev.kotlin.weather_forecast.weatherApp.ui.activities.MainActivity"
+            android:name=".kotlin.weather_forecast.weatherApp.ui.activities.MainActivity"
             android:theme="@style/AppThemeWeather">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="spandroid.dev.kotlin.weather_forecast.weatherApp.ui.activities.SettingsActivity"
-            android:theme="@style/AppThemeWeather" />
+            android:name=".kotlin.weather_forecast.weatherApp.ui.activities.SettingsActivity"
+            android:theme="@style/AppThemeWeather"/>
         <activity
-            android:name="spandroid.dev.kotlin.weather_forecast.weatherApp.ui.activities.DetailActivity"
-            android:theme="@style/AppThemeWeather" />
-
+            android:name=".kotlin.weather_forecast.weatherApp.ui.activities.DetailActivity"
+            android:theme="@style/AppThemeWeather"/>
+        <activity android:name=".socialNetworking.LinkedInActivity">
+        </activity>
     </application>
 
 </manifest>

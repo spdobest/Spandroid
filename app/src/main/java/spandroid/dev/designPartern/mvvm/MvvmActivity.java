@@ -7,6 +7,9 @@ import spandroid.dev.R;
 
 public class MvvmActivity extends AppCompatActivity {
 
+    // https://github.com/manuelvicnt/RxJava2-MVVM-Android-Structure
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

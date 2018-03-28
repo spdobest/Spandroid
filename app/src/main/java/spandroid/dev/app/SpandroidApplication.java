@@ -24,6 +24,7 @@ import spandroid.dev.dagger2.di.module.ApplicationModule;
 
 public class SpandroidApplication extends Application{
 
+
     private static final String TAG = "SpandroidApplication";
 
     static ImageLoader imageLoader;

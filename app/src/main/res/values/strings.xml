@@ -2,6 +2,13 @@
     <string name="app_name">SPandroid</string>
     <string name="google_api_keyeqweqweq">AIzaSyCrkDOMjTC3QrOadrdi5oHDfA9bqTRRDh4</string>
     <string name="google_client_id">946730317755-4sj28oepbs7fat1fbn6ncjn6h2j724l6.apps.googleusercontent.com</string>
+
+    <!--LINKED IN-->
+    <string name="linkedInClientId">81e9qedkbkskh2</string>
+    <string name="linkedInSecretId">ZGaBxPHjYcIodiJ7</string>
+
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Rs_symbol">\u20B9</string>
     <string name="intent_open_choose">Choose</string>
