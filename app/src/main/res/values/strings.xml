@@ -6,6 +6,7 @@
     <!--LINKED IN-->
     <string name="linkedInClientId">81e9qedkbkskh2</string>
     <string name="linkedInSecretId">ZGaBxPHjYcIodiJ7</string>
+    <string name="linkedinAPpId">5217445</string>
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
