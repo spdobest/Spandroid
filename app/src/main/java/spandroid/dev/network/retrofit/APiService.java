@@ -2,6 +2,7 @@ package spandroid.dev.network.retrofit;
 
 import java.util.List;
 
+import io.reactivex.Observable;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -19,6 +20,7 @@ import spandroid.dev.network.retrofit.dto.MultipleResource;
 import spandroid.dev.network.retrofit.dto.User;
 import spandroid.dev.network.retrofit.dto.UserList;
 import spandroid.dev.network.retrofit.dto.hive.MoviesResponse;
+import spandroid.dev.network.retrofit.loadmore.model.UserData;
 
 /**
  * Created by amitpadekar on 27/11/15.
@@ -74,5 +76,9 @@ public interface APiService {
     })
     @GET("users/{username}")
     Call<User> getUser(@Path("username") String username);
+
+    // AKHSAYA API CALL
+    @POST("GetAvailableChatList.php")
+    Call<List<UserData>> getUserList(@Query("UserId") String userId);
 
 }

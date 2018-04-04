@@ -221,6 +221,8 @@
             android:theme="@style/AppThemeWeather"/>
         <activity android:name=".socialNetworking.LinkedInActivity">
         </activity>
+        <activity android:name=".network.retrofit.loadmore.LoadMOreActivity">
+        </activity>
     </application>
 
 </manifest>

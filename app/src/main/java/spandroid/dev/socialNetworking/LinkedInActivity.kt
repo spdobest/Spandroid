@@ -27,24 +27,5 @@ class LinkedInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_linked_in)
     }
 
-    fun generateHashkey() {
-        try {
-            val info = packageManager.getPackageInfo(
-                    PACKAGE,
-                    PackageManager.GET_SIGNATURES)
-            for (signature in info.signatures) {
-                val md = MessageDigest.getInstance("SHA")
-                md.update(signature.toByteArray())
 
-                // info.packageName
-//                 setText(Base64.encodeToString(md.digest(),
-//                        Base64.NO_WRAP))
-            }
-        } catch (e: PackageManager.NameNotFoundException) {
-            Log.d(TAG, e.message, e)
-        } catch (e: NoSuchAlgorithmException) {
-            Log.d(TAG, e.message, e)
-        }
-
-    }
 }
