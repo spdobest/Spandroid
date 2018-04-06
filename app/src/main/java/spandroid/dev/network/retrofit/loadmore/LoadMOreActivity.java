@@ -38,6 +38,8 @@ public class LoadMOreActivity extends AppCompatActivity {
     int firstPosition = 0;
     boolean isLoadingMoreItems = false;
 
+    int pageOffset = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +53,8 @@ public class LoadMOreActivity extends AppCompatActivity {
         linearLayoutManager = new LinearLayoutManager(LoadMOreActivity.this);
         recyclerLoadMore.setLayoutManager(linearLayoutManager);
         recyclerLoadMore.setAdapter(loadMoreRecyclerAdapter);
+
+        makeAPiCall(pageOffset);
 
         recyclerLoadMore.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -82,6 +86,10 @@ public class LoadMOreActivity extends AppCompatActivity {
                         firstPosition = listProducts.size();
 
                         progressBarLoadMore.setVisibility(View.VISIBLE);
+
+
+                        makeAPiCall(pageOffset);
+
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -111,6 +119,19 @@ public class LoadMOreActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<UserData>> call, Response<List<UserData>> response) {
                 List<UserData> movies = response.body();
+                pageOffset = pageOffset + 1;
+                progressBarLoadMore.setVisibility(View.GONE);
+
+
+                if (movies != null && movies.size() > 0) {
+                    for (int i = 0; i < movies.size(); i++) {
+                        listProducts.add(movies.get(i).getProfilePic());
+                    }
+                }
+                isLoadingMoreItems = false;
+                progressBarLoadMore.setVisibility(View.GONE);
+                loadMoreRecyclerAdapter.notifyItemRangeChanged(firstPosition, listProducts.size());
+
 
             }
 

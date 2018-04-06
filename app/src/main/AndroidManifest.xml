@@ -44,7 +44,6 @@
         <activity android:name=".android7.Android7Activity"/>
         <activity android:name=".android8.Android8Activity"/>
         <activity android:name=".animation.AnimationActivity">
-
         </activity>
         <activity android:name=".base.BaseActivity"/>
         <activity android:name=".bindedService.BindServiceActivity"/>
@@ -203,7 +202,6 @@
         <activity
             android:name=".kotlin.weather_forecast.weatherApp.ui.activities.MainActivity"
             android:theme="@style/AppThemeWeather">
-
         </activity>
         <activity
             android:name=".kotlin.weather_forecast.weatherApp.ui.activities.SettingsActivity"
@@ -211,14 +209,20 @@
         <activity
             android:name=".kotlin.weather_forecast.weatherApp.ui.activities.DetailActivity"
             android:theme="@style/AppThemeWeather"/>
+        <!--
         <activity android:name=".socialNetworking.LinkedInActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        -->
         <activity android:name=".network.retrofit.loadmore.LoadMOreActivity">
+
+        </activity>
+        <activity android:name=".addviewProgrammatically.AddViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
     </application>
 

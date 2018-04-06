@@ -6,6 +6,7 @@ package spandroid.dev.recyclerView.loadmore_dragdrop;
 
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,9 +49,15 @@ public class LoadMoreRecyclerAdapter extends RecyclerView.Adapter<LoadMoreRecycl
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         String movie = moviesList.get(position);
 
-        Glide.with(holder.imageViewLoadMore.getContext())
-                .load(imageArray[position % 11])
-                .into(holder.imageViewLoadMore);
+        if (!TextUtils.isEmpty(movie) && movie.contains("firebasestorage")) {
+            Glide.with(holder.imageViewLoadMore.getContext())
+                    .load(movie)
+                    .into(holder.imageViewLoadMore);
+        } else {
+            Glide.with(holder.imageViewLoadMore.getContext())
+                    .load(imageArray[position % 11])
+                    .into(holder.imageViewLoadMore);
+        }
 
 
     }
