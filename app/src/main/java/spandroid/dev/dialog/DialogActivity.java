@@ -1,6 +1,8 @@
 package spandroid.dev.dialog;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -12,9 +14,12 @@ import android.support.v7.widget.AppCompatTextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 import spandroid.dev.R;
 
@@ -73,6 +78,13 @@ public class DialogActivity extends AppCompatActivity implements DFragment.Dialo
                 FragmentManager fm = getSupportFragmentManager();
                 // Show DialogFragment
                 dFragment.show(fm, "Dialog Fragment");
+            }
+        });
+
+        findViewById(R.id.btnDialogDatepickerlikeIphone).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showMonthAndYearPicker();
             }
         });
     }
@@ -334,4 +346,51 @@ public class DialogActivity extends AppCompatActivity implements DFragment.Dialo
         if (null != dFragment)
             dFragment.getDialog().cancel();
     }
+
+
+    private void showMonthAndYearPicker() {
+
+        final android.app.AlertDialog.Builder alert = new android.app.AlertDialog.Builder(DialogActivity.this);
+        alert.setTitle("Select Month and Year");
+
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View alertDlgView = inflater.inflate(R.layout.dialog_datepicker, null);
+        final DatePicker datePicker = alertDlgView.findViewById(R.id.datePickerGoal);
+        alert.setView(alertDlgView);
+        alert.setCancelable(false);
+
+        int year = 2018;
+        final int month = 4;
+        int day = 12;
+        datePicker.init(year, month, day, null);
+        Calendar cal = Calendar.getInstance();
+   /* cal.add(Calendar.YEAR, 1);
+    cal.add(Calendar.MONTH, 1);
+    datePicker.setMinDate(cal.getTimeInMillis());*/
+        datePicker.setMinDate(System.currentTimeMillis() + (1000 * 60 * 60 * 24 * 365));
+        //  datePicker.setMinDate(c.getTimeInMillis() - 1000);
+
+
+        alert.setPositiveButton("OK",
+                new DialogInterface.OnClickListener() {
+                    @SuppressLint("SimpleDateFormat")
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        int daySelected = datePicker.getDayOfMonth();
+                        int monthSelected = datePicker.getMonth();
+                        int yearSelected = datePicker.getYear();
+                        Toast.makeText(DialogActivity.this, "Selected Date is " + monthSelected + " " + yearSelected, Toast.LENGTH_SHORT).show();
+                    }
+                });
+        alert.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        // editText.setText("");
+                        dialog.dismiss();
+                        return;
+                    }
+                });
+        alert.show();
+    }
+
 }
