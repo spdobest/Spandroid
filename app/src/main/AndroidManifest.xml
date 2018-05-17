@@ -254,6 +254,22 @@
 
         <activity android:name=".appversion_features.AppVerionFeatureActivity">
         </activity>
+
+        <service
+            android:name=".android8.MyJobIntentService"
+            android:exported="false">
+        </service>
+        <service
+            android:name=".android8.MyJobIntentServiceJava"
+            android:exported="false">
+        </service>
+
+        <receiver android:name=".android8.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.test.intent.action.ALARM" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
