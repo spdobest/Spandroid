@@ -4,9 +4,14 @@
           package="spandroid.dev">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
 
     <application
         android:name=".app.SpandroidApplication"
@@ -35,17 +40,33 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent"/>
 
-        <activity android:name=".LauncherActivity"/>
+        <activity
+            android:name=".LauncherActivity"
+            android:resizeableActivity="true">
+            <layout
+                android:defaultHeight="500dp"
+                android:defaultWidth="600dp"
+                android:gravity="top|end"
+                android:minHeight="450dp"
+                android:minWidth="300dp"/>
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/app_shortcuts"/>
+        </activity>
         <activity android:name=".recyclerView.RecyclerViewActivity"/>
         <activity android:name=".activity.MyActivity"/>
         <activity android:name=".alarmManager.AlarmActivity"/>
-        <activity android:name=".android5.Android5Activity"/>
-        <activity android:name=".android6.Android6Activity"/>
-        <activity android:name=".android7.Android7Activity"/>
-        <activity android:name=".android8.Android8Activity"/>
+        <activity android:name=".alarmManager.AlarmActivity"/>
         <activity android:name=".animation.AnimationActivity">
         </activity>
-        <activity android:name=".base.BaseActivity"/>
+        <activity android:name=".base.java.BaseActivity"/>
         <activity android:name=".bindedService.BindServiceActivity"/>
         <activity android:name=".BitmapMemoryMngmt.BitmapMemoryMngmtActivity"/>
         <activity android:name=".broadcastReciever.BroadcastActivity"/>
@@ -215,14 +236,23 @@
         </activity>
         -->
         <activity android:name=".network.retrofit.loadmore.LoadMOreActivity">
-
         </activity>
         <activity android:name=".addviewProgrammatically.AddViewActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        </activity>
+        <activity android:name=".image_video_capture.FIleImageVideoCaptureActivity">
+        </activity>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path"/>
+        </provider>
+
+        <activity android:name=".appversion_features.AppVerionFeatureActivity">
         </activity>
     </application>
 

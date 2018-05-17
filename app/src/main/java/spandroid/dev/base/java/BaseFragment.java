@@ -1,4 +1,4 @@
-package spandroid.dev.base;
+package spandroid.dev.base.java;
 
 import android.content.Context;
 import android.net.Uri;
