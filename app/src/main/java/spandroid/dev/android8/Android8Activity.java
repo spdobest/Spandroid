@@ -21,16 +21,21 @@ public class Android8Activity extends AppCompatActivity {
 
         tvFeatures = findViewById(R.id.tvFeatures);
 
+        // https://developer.android.com/about/versions/oreo/android-8.0
+
         String noughtFeatures = "*<b> </b><br><br>" +
                 "*<b>Picture-in-Picture mode </b> - for Multi window videos <br><br>" +
-                "*<b> </b><br><br>" +
-                "*<b> </b><br><br>" +
-                "*<b> </b><br><br>" +
-                "*<b> </b><br><br>" +
-                "*<b> </b><br><br>" +
-                "*<b> </b><br><br>" +
-                "*<b> </b><br><br>" +
-                "*<b> </b><br><br>" +
+                "*<b>Notifications </b><br><br>" +
+                "*<b>Autofill framework </b><br><br>" +
+                "*<b>Downloadable fonts </b><br><br>" +
+                "*<b>Fonts in XML </b><br><br>" +
+                "*<b>Autosizing TextView </b><br><br>" +
+                "*<b>Adaptive icons </b><br><br>" +
+                "*<b>Color management </b><br><br>" +
+                "*<b>WebView APIs</b><br><br>" +
+                "*<b>Pinning shortcuts and widgets </b><br><br>" +
+                "*<b>Maximum screen aspect ratio </b><br><br>" +
+                "*<b>Multi-display support </b><br><br>" +
                 "*<b> </b><br><br>" +
                 "</b><br><br>";
 
