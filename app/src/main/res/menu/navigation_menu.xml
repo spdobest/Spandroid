@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/action_menfassion"
+              android:title="Mens Fassion">
+        </item>
+        <item android:id="@+id/action_womenfassion"
+              android:title="womens_fashion">
+
+        </item>
+        <item android:id="@+id/action_electronics"
+              android:title="Electronics">
+            <menu>
+                <item
+                    android:id="@+id/action_mobile"
+                    android:icon="@android:drawable/stat_sys_phone_call"
+                    android:title="Mobiles"></item>
+                <item
+                    android:id="@+id/action_computers"
+                    android:icon="@android:drawable/ic_menu_compass"
+                    android:title="Computers"></item>
+            </menu>
+        </item>
+        <item android:id="@+id/action_setting"  android:title="Setting"></item>
+        <item android:id="@+id/action_share"  android:title="Share"></item>
+        <item android:id="@+id/action_rateus"  android:title="Rate Us"></item>
+        <item android:id="@+id/action_logout"  android:title="Logout"></item>
+    </group>
+</menu>

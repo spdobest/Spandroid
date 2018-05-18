@@ -50,11 +50,11 @@
                 android:minHeight="450dp"
                 android:minWidth="300dp"/>
 
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+            </intent-filter>-->
 
             <meta-data
                 android:name="android.app.shortcuts"
@@ -62,7 +62,6 @@
         </activity>
         <activity android:name=".recyclerView.RecyclerViewActivity"/>
         <activity android:name=".activity.MyActivity"/>
-        <activity android:name=".alarmManager.AlarmActivity"/>
         <activity android:name=".alarmManager.AlarmActivity"/>
         <activity android:name=".animation.AnimationActivity">
         </activity>
@@ -266,10 +265,21 @@
 
         <receiver android:name=".android8.AlarmReceiver">
             <intent-filter>
-                <action android:name="com.test.intent.action.ALARM" />
+                <action android:name="com.test.intent.action.ALARM"/>
             </intent-filter>
         </receiver>
 
+        <activity android:name=".base.BaseChildActivity"
+            android:theme="@style/HomeThemeNew"
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

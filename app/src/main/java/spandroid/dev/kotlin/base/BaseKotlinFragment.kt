@@ -97,7 +97,7 @@ abstract class BaseKotlinFragment : Fragment() {
 
     protected abstract fun setListeners()
 
-    protected abstract fun getToolBarTitle(): Int
+    protected abstract fun getToolBarTitle():String
 
     /**
      * ************************* END OF OVERRIDED METHODS OF FRAGMENT  ****************************
