@@ -10,26 +10,22 @@ import android.view.ViewGroup
 
 import android.app.Activity
 import android.support.annotation.Nullable
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import spandroid.dev.R
 import spandroid.dev.base.java.BaseFragment
-import spandroid.dev.base.java.base_adapter.UsersAdapter
-import spandroid.dev.base.java.base_adapter.model.UserModelForAdapter
 import spandroid.dev.common.FragmentUtil
 import spandroid.dev.kotlin.base.BaseKotlinFragment
 
 
-class HomeKotlinFragment : BaseKotlinFragment() {
+class KotlinSettingFragmet : BaseKotlinFragment() {
 
     var toolbarTitle: String = "";
 
-    val listUser = ArrayList<UserModelForAdapter>()
-
     companion object {
-        val TAG: String = "HomeKotlinFragment"
-        fun newInstance(param1: String): HomeKotlinFragment {
-            val fragment = HomeKotlinFragment()
+
+        val TAG:String = "KotlinSettingFragmet"
+
+        fun newInstance(param1: String): KotlinSettingFragmet {
+            val fragment = KotlinSettingFragmet()
             val args = Bundle()
             args.putString("title", param1)
             fragment.arguments = args
@@ -60,27 +56,9 @@ class HomeKotlinFragment : BaseKotlinFragment() {
     @Nullable
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        var fragmentView:View = inflater.inflate(R.layout.fragment_common, container, false)
+        setLayout(R.layout.fragment_home_kotlin)
 
-        var recyclerviewCommon: RecyclerView = fragmentView.findViewById(R.id.recyclerviewCommon)
-
-
-        // setLayout(R.layout.fragment_common)
-
-        for ( i in 1..20){
-            listUser.add(UserModelForAdapter("name ${i}", "https://homepages.cae.wisc.edu/~ece533/images/monarch.png", ""))
-        }
-
-        var adapter = UsersAdapter(activity)
-        //  adapter.setListener(this);
-        recyclerviewCommon.setAdapter(adapter);
-        recyclerviewCommon.setLayoutManager( LinearLayoutManager(getActivity()));
-
-        adapter.items = listUser
-
-
-
-        return fragmentView
+        return super.onCreateView(inflater, container, savedInstanceState)
     }
 
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {

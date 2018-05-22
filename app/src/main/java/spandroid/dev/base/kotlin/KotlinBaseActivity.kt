@@ -11,7 +11,11 @@ import kotlinx.android.synthetic.main.activity_base.*
 import kotlinx.android.synthetic.main.content_base.*
 import spandroid.dev.R
 import android.support.design.widget.Snackbar
+import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentTransaction
 import android.view.Gravity
+import spandroid.dev.common.FragmentUtilsMain
+import spandroid.dev.common.ui.CommonFragment
 
 
 /**
@@ -19,6 +23,11 @@ import android.view.Gravity
  */
 abstract class KotlinBaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    var fragmentPopped = false
+    var manager = supportFragmentManager
+    var ft = manager.beginTransaction()
+
+    lateinit var  fragment:Fragment
 
     companion object {
         public val TAG = "KotlinBaseActivity"
@@ -108,6 +117,8 @@ abstract class KotlinBaseActivity : AppCompatActivity(), NavigationView.OnNaviga
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+         fragmentPopped = false
+
         when (item.itemId) {
 
             R.id.action_menfassion -> {
@@ -140,33 +151,64 @@ abstract class KotlinBaseActivity : AppCompatActivity(), NavigationView.OnNaviga
 
             R.id.action_computers -> {
                 closeDrawer()
-                supportFragmentManager.beginTransaction().add(R.id.layout_container,HomeKotlinFragment.newInstance(item!!.title.toString()), "HomeKotlinFragment").commit()
+                supportFragmentManager.beginTransaction()
+                        .add(R.id.layout_container,
+                                HomeKotlinFragment.newInstance(item!!.title.toString()),
+                                HomeKotlinFragment.TAG)
+                        .addToBackStack(null)
+                        .commit()
                 showSnackbarMessage("Computer clicked")
                 return true
             }
 
             R.id.action_setting -> {
                 closeDrawer()
-                supportFragmentManager.beginTransaction().add(R.id.layout_container, HomeKotlinFragment.newInstance(item!!.title.toString()), "HomeKotlinFragment").commit()
+
+                fragment =  KotlinSettingFragmet.newInstance(item!!.title.toString())
+
+                /*supportFragmentManager.beginTransaction()
+                        .add(R.id.layout_container,
+                                KotlinSettingFragmet.newInstance(item!!.title.toString()),
+                                KotlinSettingFragmet.TAG)
+                        .addToBackStack(null)
+                        .commit()*/
                 showSnackbarMessage("Setting clicked")
                 return true
             }
             R.id.action_share -> {
                 closeDrawer()
-                supportFragmentManager.beginTransaction().add(R.id.layout_container, HomeKotlinFragment.newInstance(item!!.title.toString()), "HomeKotlinFragment").commit()
+
+                fragment =  HomeKotlinFragment.newInstance(item!!.title.toString())
+
+                /*supportFragmentManager.beginTransaction()
+                        .add(R.id.layout_container,
+                                HomeKotlinFragment.newInstance(item!!.title.toString()),
+                                "HomeKotlinFragment")
+                        .addToBackStack(null)
+                        .commit()*/
                 showSnackbarMessage("Share clicked")
                 return true
             }
             R.id.action_rateus -> {
                 closeDrawer()
-                supportFragmentManager.beginTransaction().add(R.id.layout_container, HomeKotlinFragment.newInstance(item!!.title.toString()), "HomeKotlinFragment").commit()
+                supportFragmentManager.beginTransaction()
+                        .add(R.id.layout_container,
+                                CommonFragment.newInstance(item!!.title.toString()),
+                                "HomeKotlinFragment")
+                        .addToBackStack(null)
+                        .commit()
                 showSnackbarMessage("Rateus clicked")
                 return true
             }
             R.id.action_logout -> {
                 closeDrawer()
                 showSnackbarMessage("logoput clicked")
-                supportFragmentManager.beginTransaction().add(R.id.layout_container, HomeKotlinFragment.newInstance(item!!.title.toString()), "HomeKotlinFragment").commit()
+                supportFragmentManager.beginTransaction()
+                        .add(R.id.layout_container,
+                                HomeKotlinFragment.newInstance(item!!.title.toString()),
+                                "HomeKotlinFragment")
+                        .addToBackStack(null)
+                        .commit()
                 return true
             }
 
@@ -176,6 +218,20 @@ abstract class KotlinBaseActivity : AppCompatActivity(), NavigationView.OnNaviga
             }
         }
 
+        addFragments(fragment)
+
+    }
+
+    fun addFragments(fragment: Fragment){
+        var backStateName = fragment.javaClass.getName()
+
+        fragmentPopped = manager.popBackStackImmediate(backStateName, 0)
+        if (!fragmentPopped) {
+            ft.replace(R.id.layout_container, fragment)
+        }
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+        ft.addToBackStack(backStateName)
+        ft.commit()
     }
 
     public fun showSnackbarMessage(message: String, lenth: Int = Snackbar.LENGTH_SHORT) {
