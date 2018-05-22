@@ -21,7 +21,7 @@ import android.util.AttributeSet;
  * <p>
  * The original adapter creates 4 items: [0,1,2,3]
  * The modified adapter will have to create 6 items [0,1,2,3,4,5]
- * with mapping realPosition=(position-1)%count
+ * with mapping realPosition=(mPosition-1)%count
  * [0->3, 1->0, 2->1, 3->2, 4->3, 5->0]
  */
 public class LoopViewPager extends ViewPager {
@@ -108,7 +108,7 @@ public class LoopViewPager extends ViewPager {
      *
      * @param position
      * @param count
-     * @return (position-1)%count
+     * @return (mPosition-1)%count
      */
     public static int toRealPosition(int position, int count) {
         position = position - 1;

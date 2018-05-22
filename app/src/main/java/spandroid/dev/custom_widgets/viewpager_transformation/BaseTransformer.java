@@ -21,7 +21,7 @@ public abstract class BaseTransformer implements PageTransformer {
     }
 
     /**
-     * If the position offset of a fragment is less than negative one or greater than one, returning true will set the
+     * If the mPosition offset of a fragment is less than negative one or greater than one, returning true will set the
      * visibility of the fragment to {@link View#GONE}. Returning false will force the fragment to {@link View#VISIBLE}.
      *
      * @return

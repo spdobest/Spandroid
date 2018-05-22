@@ -974,7 +974,7 @@ public class ObjectUtils {
 
         Collections.sort(dashBoard, new Comparator<DashBoardItem>() {
             public int compare(DashBoardItem firstItem, DashBoardItem secondItem) {
-                return firstItem.getPosition() - secondItem.getPosition();
+                return firstItem.getMPosition() - secondItem.getMPosition();
             }
         });
     }

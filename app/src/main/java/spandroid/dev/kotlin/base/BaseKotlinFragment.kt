@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import kotlinx.android.synthetic.main.fragment_base_kotlin.*
 import spandroid.dev.R
 
@@ -65,13 +66,14 @@ abstract class BaseKotlinFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
 
 
-        var fragmentView = inflater.inflate(R.layout.fragment_base_kotlin, container, false)
+        var fragmentView:View = inflater.inflate(R.layout.fragment_base_kotlin, container, false)
+
+        var frameLayoutRootBaseKotlin:FrameLayout = fragmentView.findViewById(R.id.frameLayoutRootBaseKotlin)
+
+        inflater.inflate(getLayout(), frameLayoutRootBaseKotlin)
 
         initializeResources()
         setListeners()
-
-        inflater.inflate(mLayoutId, frameLayoutRootBaseKotlin)
-
 
         return fragmentView
     }
@@ -86,12 +88,17 @@ abstract class BaseKotlinFragment : Fragment() {
     }
 
 
+
+    protected fun getLayout():Int {
+        return mLayoutId
+    }
+
     protected fun setLayout(layoutId: Int) {
         mLayoutId = layoutId
     }
 
 
-    protected abstract fun setLayoutFileName(layoutId: Int)
+   // protected abstract fun setLayoutFileName(layoutId: Int)
 
     protected abstract fun initializeResources()
 

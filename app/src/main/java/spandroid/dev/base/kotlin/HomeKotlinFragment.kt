@@ -30,10 +30,6 @@ class HomeKotlinFragment : BaseKotlinFragment() {
         }
     }
 
-    override fun setLayoutFileName(layoutId: Int) {
-        R.layout.fragment_home_kotlin
-    }
-
     override fun initializeResources() {
     }
 
@@ -56,7 +52,9 @@ class HomeKotlinFragment : BaseKotlinFragment() {
 
     @Nullable
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         setLayout(R.layout.fragment_home_kotlin)
+
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 
@@ -70,8 +68,6 @@ class HomeKotlinFragment : BaseKotlinFragment() {
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
-
-
     }
 
     fun setEmptyView(text: String) {

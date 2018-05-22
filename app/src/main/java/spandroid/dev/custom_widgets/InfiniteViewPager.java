@@ -46,7 +46,7 @@ public class InfiniteViewPager extends ViewPager {
         int position = super.getCurrentItem();
         if (getAdapter() instanceof SlideViewPagerAdapter) {
             SlideViewPagerAdapter infAdapter = (SlideViewPagerAdapter) getAdapter();
-            // Return the actual item position in the data backing InfinitePagerAdapter
+            // Return the actual item mPosition in the data backing InfinitePagerAdapter
             return (position % infAdapter.getRealCount());
         } else {
             return super.getCurrentItem();

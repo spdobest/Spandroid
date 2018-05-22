@@ -68,7 +68,7 @@ public class GridAdapterInfoWindow extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        /*if(position%2 == 0){
+        /*if(mPosition%2 == 0){
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 viewHolder.mLinearLayoutRowInfoRoot.setBackground(ContextCompat.getDrawable(context,R.drawable.boarder_right));
             }

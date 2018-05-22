@@ -104,14 +104,14 @@
         <!-- The class name of a Behavior class defining special runtime behavior
              for this child view. -->
         <attr name="layout_behavior" format="string" />
-        <!-- The id of an anchor view that this view should position relative to. -->
+        <!-- The id of an anchor view that this view shomPositiontion relative to. -->
         <attr name="layout_anchor" format="reference" />
-        <!-- The index of a keyline this view should position relative to.
+        <!-- The index of a keyline this view shomPositiontion relative to.
              android:layout_gravity will affect how the view aligns to the
              specified keyline. -->
         <attr name="layout_keyline" format="integer" />
 
-        <!-- Specifies how an object should position relative to an anchor, on both the X and Y axes,
+        <!-- Specifies how an object shomPositiontion relative to an anchor, on both the X and Y axes,
              within its parent's bounds.  -->
         <attr name="layout_anchorGravity">
             <!-- Push object to the top of its container, not changing its size. -->

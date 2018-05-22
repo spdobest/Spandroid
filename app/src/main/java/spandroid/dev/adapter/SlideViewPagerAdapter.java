@@ -99,15 +99,15 @@ public class SlideViewPagerAdapter extends PagerAdapter {
 
 /*
     @Override
-    public float getPageWidth(int position) {
-        return  super.getPageWidth(position);
+    public float getPageWidth(int mPosition) {
+        return  super.getPageWidth(mPosition);
     }*/
 
     private void openProductList(int position) {
         if (position == 0)
             position = 1;
 //		Intent intentMen = new Intent( context, ProductListActivity.class  );
-//		intentMen.putExtra( Constants.BundleKeys.IMAGE_TYPE, position );
+//		intentMen.putExtra( Constants.BundleKeys.IMAGE_TYPE, mPosition );
 //		context.startActivity( intentMen);
         //(( AppCompatActivity )context).finish();
     }
