@@ -27,7 +27,7 @@ abstract class KotlinBaseActivity : AppCompatActivity(), NavigationView.OnNaviga
     var manager = supportFragmentManager
     var ft = manager.beginTransaction()
 
-    lateinit var  fragment:Fragment
+    lateinit var fragment: Fragment
 
     companion object {
         public val TAG = "KotlinBaseActivity"
@@ -117,7 +117,7 @@ abstract class KotlinBaseActivity : AppCompatActivity(), NavigationView.OnNaviga
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-         fragmentPopped = false
+        fragmentPopped = false
 
         when (item.itemId) {
 
@@ -137,7 +137,7 @@ abstract class KotlinBaseActivity : AppCompatActivity(), NavigationView.OnNaviga
 
             R.id.action_electronics -> {
                 closeDrawer()
-                supportFragmentManager.beginTransaction().add(R.id.layout_container,HomeKotlinFragment.newInstance(item!!.title.toString()), "HomeKotlinFragment").commit()
+                supportFragmentManager.beginTransaction().add(R.id.layout_container, HomeKotlinFragment.newInstance(item!!.title.toString()), "HomeKotlinFragment").commit()
                 showSnackbarMessage("Electronics clicked")
                 return true
             }
@@ -164,7 +164,7 @@ abstract class KotlinBaseActivity : AppCompatActivity(), NavigationView.OnNaviga
             R.id.action_setting -> {
                 closeDrawer()
 
-                fragment =  KotlinSettingFragmet.newInstance(item!!.title.toString())
+                fragment = KotlinSettingFragmet.newInstance(item!!.title.toString())
 
                 /*supportFragmentManager.beginTransaction()
                         .add(R.id.layout_container,
@@ -178,7 +178,7 @@ abstract class KotlinBaseActivity : AppCompatActivity(), NavigationView.OnNaviga
             R.id.action_share -> {
                 closeDrawer()
 
-                fragment =  HomeKotlinFragment.newInstance(item!!.title.toString())
+                fragment = HomeKotlinFragment.newInstance(item!!.title.toString())
 
                 /*supportFragmentManager.beginTransaction()
                         .add(R.id.layout_container,
@@ -222,7 +222,7 @@ abstract class KotlinBaseActivity : AppCompatActivity(), NavigationView.OnNaviga
 
     }
 
-    fun addFragments(fragment: Fragment){
+    fun addFragments(fragment: Fragment) {
         var backStateName = fragment.javaClass.getName()
 
         fragmentPopped = manager.popBackStackImmediate(backStateName, 0)
