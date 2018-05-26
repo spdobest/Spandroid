@@ -86,13 +86,15 @@
         android:id="@+id/recyclerViewNetwork"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="20"
+        android:layout_weight="20.5"
         android:padding="@dimen/padd_10" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5">
+        android:layout_weight="0.5"
+        android:visibility="gone"
+        >
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/tvVolley_activity"

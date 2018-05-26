@@ -43,7 +43,8 @@
         <activity android:name=".android6.Android6Activity"/>
         <activity android:name=".android7.Android7Activity"/>
         <activity android:name=".android8.Android8Activity"/>
-        <activity android:name=".animation.AnimationActivity">
+        <activity android:name=".dialog.DialogActivity">
+
         </activity>
         <activity android:name=".base.BaseActivity"/>
         <activity android:name=".bindedService.BindServiceActivity"/>
@@ -101,6 +102,17 @@
         </activity>
         <activity android:name=".popupwindow.PopupWIndowActivity"/>
         <activity android:name=".animation.CircularReavelAnimActivity"/>
+
+        <activity android:name=".animation.AnimationActivity">
+
+          <!--  <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>-->
+
+        </activity>
+
         <activity android:name=".rxjava.RxJavaActivity"/>
         <activity
             android:name=".bottomsheet.ButtomSheetActivity"
@@ -160,14 +172,12 @@
         </activity>
         <activity android:name=".network.volley.VolleyMainActivity"/>
         <activity android:name=".network.MainNetworkActivity">
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
+
         </activity>
         <activity android:name=".network.retrofit.RetrofitMainActivity"/>
         FOR ANALYTICS
@@ -217,13 +227,7 @@
         <activity android:name=".network.retrofit.loadmore.LoadMOreActivity">
 
         </activity>
-        <activity android:name=".addviewProgrammatically.AddViewActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
