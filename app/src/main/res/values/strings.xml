@@ -179,4 +179,9 @@ Android 5.0 Lollipop was one of the most significant Android releases ever, in n
     <string name="no_internet">No Internet Connection</string>
     <string name="ok">Ok</string>
 
+    <!--FOR SHORTCUTS-->
+    <string name="compose_shortcut_short_label1">shortcut1</string>
+    <string name="compose_shortcut_long_label1">shortcut1shortcut1shortcut1shortcut1</string>
+    <string name="compose_disabled_message1">Disable message</string>
+
 </resources>

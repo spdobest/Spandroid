@@ -84,7 +84,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
     /**
      * Set the {@link ViewPager.OnPageChangeListener}. When using {@link SlidingTabLayout} you are
      * required to set any {@link ViewPager.OnPageChangeListener} through this method. This is so
-     * that the layout can update it's scroll position correctly.
+     * that the layout can update it's scroll mPosition correctly.
      *
      * @see ViewPager#setOnPageChangeListener(ViewPager.OnPageChangeListener)
      */
@@ -214,12 +214,12 @@ public class SlidingTabLayout extends HorizontalScrollView {
     public interface TabColorizer {
 
         /**
-         * @return return the color of the indicator used when {@code position} is selected.
+         * @return return the color of the indicator used when {@code mPosition} is selected.
          */
         int getIndicatorColor(int position);
 
         /**
-         * @return return the color of the divider drawn to the right of {@code position}.
+         * @return return the color of the divider drawn to the right of {@code mPosition}.
          */
         int getDividerColor(int position);
 

@@ -4,9 +4,14 @@
           package="spandroid.dev">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:name=".app.SpandroidApplication"
@@ -35,7 +40,26 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent"/>
 
-        <activity android:name=".LauncherActivity"/>
+        <activity
+            android:name=".LauncherActivity"
+            android:resizeableActivity="true">
+            <layout
+                android:defaultHeight="500dp"
+                android:defaultWidth="600dp"
+                android:gravity="top|end"
+                android:minHeight="450dp"
+                android:minWidth="300dp" />
+
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.MAIN"/>
+
+                 <category android:name="android.intent.category.LAUNCHER"/>
+             </intent-filter>-->
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/app_shortcuts" />
+        </activity>
         <activity android:name=".recyclerView.RecyclerViewActivity"/>
         <activity android:name=".activity.MyActivity"/>
         <activity android:name=".alarmManager.AlarmActivity"/>
@@ -46,7 +70,8 @@
         <activity android:name=".dialog.DialogActivity">
 
         </activity>
-        <activity android:name=".base.BaseActivity"/>
+        <activity android:name=".animation.AnimationActivity"></activity>
+        <activity android:name=".base.java.BaseActivity" />
         <activity android:name=".bindedService.BindServiceActivity"/>
         <activity android:name=".BitmapMemoryMngmt.BitmapMemoryMngmtActivity"/>
         <activity android:name=".broadcastReciever.BroadcastActivity"/>
@@ -103,15 +128,6 @@
         <activity android:name=".popupwindow.PopupWIndowActivity"/>
         <activity android:name=".animation.CircularReavelAnimActivity"/>
 
-        <activity android:name=".animation.AnimationActivity">
-
-          <!--  <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>-->
-
-        </activity>
 
         <activity android:name=".rxjava.RxJavaActivity"/>
         <activity
@@ -224,10 +240,50 @@
 
         </activity>
         -->
-        <activity android:name=".network.retrofit.loadmore.LoadMOreActivity">
+        <activity android:name=".network.retrofit.loadmore.LoadMOreActivity"></activity>
+
+        <activity android:name=".image_video_capture.FIleImageVideoCaptureActivity"></activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+
+        <activity android:name=".appversion_features.AppVerionFeatureActivity"></activity>
+
+        <service
+            android:name=".android8.MyJobIntentService"
+            android:exported="false"></service>
+        <service
+            android:name=".android8.MyJobIntentServiceJava"
+            android:exported="false"></service>
+
+        <receiver android:name=".android8.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.test.intent.action.ALARM" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".utils.ImagePickerManager"
+            android:theme="@style/HomeThemeNew" />
+
+        <activity
+            android:name=".base.BaseChildActivity"
+            android:theme="@style/HomeThemeNew">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
-
     </application>
 
 </manifest>

@@ -1,11 +1,11 @@
 package spandroid.dev.network;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -25,7 +25,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import spandroid.dev.R;
-import spandroid.dev.managers.AnalyticsManager;
 import spandroid.dev.network.adapter.NetworkRecyclerAdapter;
 import spandroid.dev.network.async.HttpHandler;
 import spandroid.dev.network.retrofit.APiService;
@@ -37,6 +36,7 @@ import spandroid.dev.network.volley.networking.Connectivity;
 import spandroid.dev.network.volley.networking.DialogUtil;
 import spandroid.dev.network.volley.networking.RequestCode;
 import spandroid.dev.network.volley.networking.VolleyUtil;
+import spandroid.dev.utils.ImagePickerManager;
 
 import static spandroid.dev.network.volley.networking.URLConstants.url;
 
@@ -73,18 +73,36 @@ public class MainNetworkActivity extends AppCompatActivity {
     private long timeStart = 0;
     private int networkType = -1;
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+
+        if (requestCode == 123) {
+            if (data != null && data.hasExtra("data_uri")) {
+                String uri = data.getExtras().getString("data_uri");
+            }
+        }
+
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_network);
         ButterKnife.bind(this);
 
-        recyclerViewNetwork.setLayoutManager(new LinearLayoutManager(MainNetworkActivity.this,
+
+        Intent intent = new Intent(this, ImagePickerManager.class);
+        startActivityForResult(intent, 123);
+
+        /*recyclerViewNetwork.setLayoutManager(new LinearLayoutManager(MainNetworkActivity.this,
                 LinearLayoutManager.VERTICAL, false));
         networkRecyclerAdapter = new NetworkRecyclerAdapter(listMovies, MainNetworkActivity.this);
         recyclerViewNetwork.setAdapter(networkRecyclerAdapter);
 
-        AnalyticsManager.aboutUs(MainNetworkActivity.this);
+        AnalyticsManager.aboutUs(MainNetworkActivity.this);*/
 
 
     }

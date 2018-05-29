@@ -4,16 +4,11 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import java.math.BigDecimal;
-import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.Format;
 import java.text.NumberFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -59,24 +54,15 @@ public class ObjectUtils {
     }
 
     public static boolean isNotNull(Object o) {
-        if (o != null) {
-            return true;
-        }
-        return false;
+        return o != null;
     }
 
     public static boolean isEmpty(String s) {
-        if (s != null && s.trim().length() > 0) {
-            return false;
-        }
-        return true;
+        return s == null || s.trim().length() <= 0;
     }
 
     public static boolean isEmpty(List s) {
-        if (s != null && s.size() > 0) {
-            return false;
-        }
-        return true;
+        return s == null || s.size() <= 0;
     }
 
     public static int getIntFromString(String number) {
@@ -861,9 +847,7 @@ public class ObjectUtils {
             result = String.format("%.2f", dblPrice);
             dblPrice = ObjectUtils.getDoubleFromString(result);
 
-            if (dblPrice % doubleTick != 0) {
-                return false;
-            }
+            return !(dblPrice % doubleTick != 0);
         }
 
         return true;
@@ -974,7 +958,7 @@ public class ObjectUtils {
 
         Collections.sort(dashBoard, new Comparator<DashBoardItem>() {
             public int compare(DashBoardItem firstItem, DashBoardItem secondItem) {
-                return firstItem.getPosition() - secondItem.getPosition();
+                return firstItem.getMPosition() - secondItem.getMPosition();
             }
         });
     }

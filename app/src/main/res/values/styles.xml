@@ -1,5 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <style name="HomeThemeNew" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/home_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/home_colorPrimaryDark</item>
+        <item name="colorAccent">@color/home_colorAccent</item>
+        <item name="colorControlNormal">@color/home_textColorprimary</item>
+        <item name="colorButtonNormal">@color/home_colorAccent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--<item name="android:windowBackground">@drawable/splash_bg</item>-->
+    </style>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->

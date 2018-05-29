@@ -51,7 +51,7 @@ public class SwipeToDeleteAdapter extends RecyclerView.Adapter<SwipeToDeleteAdap
 
     public void removeItem(int position) {
         cartList.remove(position);
-        // notify the item removed by position
+        // notify the item removed by mPosition
         // to perform recycler view delete animations
         // NOTE: don't call notifyDataSetChanged()
         notifyItemRemoved(position);
@@ -59,7 +59,7 @@ public class SwipeToDeleteAdapter extends RecyclerView.Adapter<SwipeToDeleteAdap
 
     public void restoreItem(Item item, int position) {
         cartList.add(position, item);
-        // notify item added by position
+        // notify item added by mPosition
         notifyItemInserted(position);
     }
 

@@ -40,7 +40,7 @@ import static android.widget.LinearLayout.HORIZONTAL;
 import static android.widget.LinearLayout.VERTICAL;
 
 /**
- * Draws circles (one for each view). The current view position is filled and
+ * Draws circles (one for each view). The current view mPosition is filled and
  * others are only stroked.
  */
 public class CirclePageIndicator extends View implements PageIndicator {

@@ -1,11 +1,11 @@
 package spandroid.dev.kotlin.base
 
-import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import kotlinx.android.synthetic.main.fragment_base_kotlin.*
 import spandroid.dev.R
 
@@ -28,29 +28,6 @@ abstract class BaseKotlinFragment : Fragment() {
      */
 
     /**
-     * OnATtach() of Base Fragment
-     * Initialize all the interfaces here
-     */
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
-
-    }
-
-    /**
-     * OnCreate Of Base Fragment
-     *
-     * The onCreate() method in a Fragment is called after the Activity's onAttachFragment()
-     * but before that Fragment's onCreateView().
-     * In this method, you can assign variables, get Intent extras,
-     * and anything else that doesn't involve the View hierarchy (i.e. non-graphical initialisations).
-     * This is because this method can be called when the Activity's onCreate() is not finished,
-     * and so trying to access the View hierarchy here may result in a crash.
-     */
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-    /**
      * OnCreateView of Base Fragment
      * the method you initialize and create all your objects,
      * including your TextView), so it's not a matter of performance.
@@ -65,39 +42,35 @@ abstract class BaseKotlinFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
 
 
-        var fragmentView = inflater.inflate(R.layout.fragment_base_kotlin, container, false)
+        var fragmentView: View = inflater.inflate(R.layout.fragment_base_kotlin, container, false)
+
+        var frameLayoutRootBaseKotlin: FrameLayout = fragmentView.findViewById(R.id.frameLayoutRootBaseKotlin)
+
+        inflater.inflate(getLayout(), frameLayoutRootBaseKotlin)
 
         initializeResources()
         setListeners()
-
-        inflater.inflate(mLayoutId, frameLayoutRootBaseKotlin)
-
 
         return fragmentView
     }
 
 
-    /**
-     * remove the callback from here
-     */
-
-    override fun onDetach() {
-        super.onDetach()
+    protected fun getLayout(): Int {
+        return mLayoutId
     }
-
 
     protected fun setLayout(layoutId: Int) {
         mLayoutId = layoutId
     }
 
 
-    protected abstract fun setLayoutFileName(layoutId: Int)
+    // protected abstract fun setLayoutFileName(layoutId: Int)
 
     protected abstract fun initializeResources()
 
     protected abstract fun setListeners()
 
-    protected abstract fun getToolBarTitle(): Int
+    protected abstract fun getToolBarTitle(): String
 
     /**
      * ************************* END OF OVERRIDED METHODS OF FRAGMENT  ****************************
