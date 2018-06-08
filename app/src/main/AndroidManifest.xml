@@ -187,11 +187,11 @@
         </activity>
         <activity android:name=".network.volley.VolleyMainActivity"/>
         <activity android:name=".network.MainNetworkActivity">
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity android:name=".network.retrofit.RetrofitMainActivity"/>
         FOR ANALYTICS
@@ -272,9 +272,11 @@
         <activity
             android:name=".base.BaseChildActivity"
             android:theme="@style/HomeThemeNew">
-
         </activity>
         <activity android:name=".notification.NotificationActivity">
+
+        </activity>
+        <activity android:name=".seekbar.SeekbarActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
