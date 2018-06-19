@@ -28,6 +28,7 @@ public class SeekbarActivity extends AppCompatActivity {
 
         bar.incrementProgressBy(1);
         bar.setMax(50);
+        bar.setMin();
         bar.setProgress(5);
 
         bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
