@@ -8,7 +8,7 @@ import android.content.Context;
 import spandroid.dev.room.dto.User;
 import spandroid.dev.room.dto.UserDao;
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase INSTANCE;

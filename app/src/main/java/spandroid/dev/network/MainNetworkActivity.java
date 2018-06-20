@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -36,7 +37,6 @@ import spandroid.dev.network.volley.networking.Connectivity;
 import spandroid.dev.network.volley.networking.DialogUtil;
 import spandroid.dev.network.volley.networking.RequestCode;
 import spandroid.dev.network.volley.networking.VolleyUtil;
-import spandroid.dev.utils.ImagePickerManager;
 
 import static spandroid.dev.network.volley.networking.URLConstants.url;
 
@@ -94,15 +94,15 @@ public class MainNetworkActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 
-        Intent intent = new Intent(this, ImagePickerManager.class);
-        startActivityForResult(intent, 123);
+//        Intent intent = new Intent(this, ImagePickerManager.class);
+//        startActivityForResult(intent, 123);
 
-        /*recyclerViewNetwork.setLayoutManager(new LinearLayoutManager(MainNetworkActivity.this,
+        recyclerViewNetwork.setLayoutManager(new LinearLayoutManager(MainNetworkActivity.this,
                 LinearLayoutManager.VERTICAL, false));
         networkRecyclerAdapter = new NetworkRecyclerAdapter(listMovies, MainNetworkActivity.this);
         recyclerViewNetwork.setAdapter(networkRecyclerAdapter);
 
-        AnalyticsManager.aboutUs(MainNetworkActivity.this);*/
+        //    AnalyticsManager.aboutUs(MainNetworkActivity.this);
 
 
     }

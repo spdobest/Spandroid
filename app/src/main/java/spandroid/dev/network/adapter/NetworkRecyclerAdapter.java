@@ -5,12 +5,22 @@ package spandroid.dev.network.adapter;
  */
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 
 import java.util.List;
 
@@ -37,11 +47,36 @@ public class NetworkRecyclerAdapter extends RecyclerView.Adapter<NetworkRecycler
     }
 
     @Override
-    public void onBindViewHolder(MovieViewHolder holder, final int position) {
-        holder.movieTitle.setText(movies.get(position).getTitle());
-        holder.data.setText(movies.get(position).getReleaseDate());
-        holder.movieDescription.setText(movies.get(position).getOverview());
-        holder.rating.setText(movies.get(position).getVoteAverage().toString());
+    public void onBindViewHolder(final MovieViewHolder holder, final int position) {
+
+        Movie movie = movies.get(position);
+
+        holder.movieTitle.setText(movie.getTitle());
+        holder.data.setText(movie.getReleaseDate());
+        holder.movieDescription.setText(movie.getOverview());
+        holder.rating.setText(movie.getVoteAverage().toString());
+
+
+        String imagePath = movie.getPosterPath();
+        imagePath = imagePath.replace("/", "");
+
+        Glide.with(context)
+                .load("http://image.tmdb.org/t/p/w185//" + imagePath)
+                .listener(new RequestListener<Drawable>() {
+                    @Override
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                        holder.progress.setVisibility(View.GONE);
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                        holder.progress.setVisibility(View.GONE);
+                        return false;
+                    }
+                })
+                .into(holder.imageViewPoster);
+
     }
 
     @Override
@@ -55,6 +90,8 @@ public class NetworkRecyclerAdapter extends RecyclerView.Adapter<NetworkRecycler
         TextView data;
         TextView movieDescription;
         TextView rating;
+        AppCompatImageView imageViewPoster;
+        ProgressBar progress;
 
 
         public MovieViewHolder(View v) {
@@ -64,6 +101,8 @@ public class NetworkRecyclerAdapter extends RecyclerView.Adapter<NetworkRecycler
             data = v.findViewById(R.id.subtitle);
             movieDescription = v.findViewById(R.id.description);
             rating = v.findViewById(R.id.rating);
+            imageViewPoster = v.findViewById(R.id.imageViewPoster);
+            progress = v.findViewById(R.id.progress);
         }
     }
 }

@@ -16,7 +16,6 @@
 package spandroid.dev.utils.myUtils;
 
 import android.Manifest;
-
 import android.annotation.TargetApi;
 import android.app.ActivityManager;
 import android.app.ActivityManager.MemoryInfo;
@@ -33,11 +32,11 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
 import android.net.Uri;
 import android.os.Build;
-import android.support.v4.BuildConfig;
 import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
+
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileFilter;
@@ -51,7 +50,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.regex.Pattern;
+
 import javax.security.auth.x500.X500Principal;
+
+import spandroid.dev.BuildConfig;
 
 
 public final class AppUtils {
@@ -237,11 +239,9 @@ public final class AppUtils {
         List<RunningTaskInfo> taskList = am.getRunningTasks(1);
         if (taskList != null && !taskList.isEmpty()) {
             ComponentName topActivity = taskList.get(0).topActivity;
-            if (topActivity != null
+            return topActivity != null
                     && !topActivity.getPackageName().equals(
-                    context.getPackageName())) {
-                return true;
-            }
+                    context.getPackageName());
         }
         return false;
     }

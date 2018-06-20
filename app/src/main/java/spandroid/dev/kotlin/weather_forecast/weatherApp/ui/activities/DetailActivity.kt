@@ -4,16 +4,12 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.widget.TextView
-import com.antonioleiva.weatherapp.domain.commands.RequestDayForecastCommand
 import com.antonioleiva.weatherapp.domain.model.Forecast
 import com.antonioleiva.weatherapp.extensions.color
 import com.antonioleiva.weatherapp.extensions.textColor
 import com.antonioleiva.weatherapp.extensions.toDateString
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.kotlin_activity_detail.*
-import kotlinx.coroutines.experimental.android.UI
-import kotlinx.coroutines.experimental.async
-import org.jetbrains.anko.coroutines.experimental.bg
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.find
 import spandroid.dev.R
@@ -36,10 +32,10 @@ class DetailActivity : AppCompatActivity(), ToolbarManager {
         toolbarTitle = intent.getStringExtra(CITY_NAME)
         enableHomeAsUp { onBackPressed() }
 
-        async(UI) {
+        /*async(UI) {
             val result = bg { RequestDayForecastCommand(intent.getLongExtra(ID, -1)).execute() }
             bindForecast(result.await())
-        }
+        }*/
     }
 
     private fun bindForecast(forecast: Forecast) = with(forecast) {
