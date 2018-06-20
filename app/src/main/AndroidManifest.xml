@@ -7,12 +7,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
 
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
 
     <application
         android:name=".app.SpandroidApplication"
@@ -49,17 +49,19 @@
                 android:defaultWidth="600dp"
                 android:gravity="top|end"
                 android:minHeight="450dp"
-                android:minWidth="300dp" />
+                android:minWidth="300dp"/>
 
-            <!-- <intent-filter>
+            <!--
+             <intent-filter>
                  <action android:name="android.intent.action.MAIN"/>
 
                  <category android:name="android.intent.category.LAUNCHER"/>
-             </intent-filter>-->
+             </intent-filter>
+            -->
 
             <meta-data
                 android:name="android.app.shortcuts"
-                android:resource="@xml/app_shortcuts" />
+                android:resource="@xml/app_shortcuts"/>
         </activity>
         <activity android:name=".recyclerView.RecyclerViewActivity"/>
         <activity android:name=".activity.MyActivity"/>
@@ -69,10 +71,9 @@
         <activity android:name=".android7.Android7Activity"/>
         <activity android:name=".android8.Android8Activity"/>
         <activity android:name=".dialog.DialogActivity">
-
         </activity>
-        <activity android:name=".animation.AnimationActivity"></activity>
-        <activity android:name=".base.java.BaseActivity" />
+        <activity android:name=".animation.AnimationActivity"/>
+        <activity android:name=".base.java.BaseActivity"/>
         <activity android:name=".bindedService.BindServiceActivity"/>
         <activity android:name=".BitmapMemoryMngmt.BitmapMemoryMngmtActivity"/>
         <activity android:name=".broadcastReciever.BroadcastActivity"/>
@@ -128,8 +129,6 @@
         </activity>
         <activity android:name=".popupwindow.PopupWIndowActivity"/>
         <activity android:name=".animation.CircularReavelAnimActivity"/>
-
-
         <activity android:name=".rxjava.RxJavaActivity"/>
         <activity
             android:name=".bottomsheet.ButtomSheetActivity"
@@ -190,12 +189,11 @@
         </activity>
         <activity android:name=".network.volley.VolleyMainActivity"/>
         <activity android:name=".network.MainNetworkActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+          <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>-->
         </activity>
         <activity android:name=".network.retrofit.RetrofitMainActivity"/>
         FOR ANALYTICS
@@ -242,9 +240,8 @@
 
         </activity>
         -->
-        <activity android:name=".network.retrofit.loadmore.LoadMOreActivity"></activity>
-
-        <activity android:name=".image_video_capture.FIleImageVideoCaptureActivity"></activity>
+        <activity android:name=".network.retrofit.loadmore.LoadMOreActivity"/>
+        <activity android:name=".image_video_capture.FIleImageVideoCaptureActivity"/>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -253,38 +250,49 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_path" />
+                android:resource="@xml/provider_path"/>
         </provider>
 
-        <activity android:name=".appversion_features.AppVerionFeatureActivity"></activity>
+        <activity android:name=".appversion_features.AppVerionFeatureActivity"/>
 
         <service
             android:name=".android8.MyJobIntentService"
-            android:exported="false"></service>
+            android:exported="false"/>
         <service
             android:name=".android8.MyJobIntentServiceJava"
-            android:exported="false"></service>
+            android:exported="false"/>
 
         <receiver android:name=".android8.AlarmReceiver">
             <intent-filter>
-                <action android:name="com.test.intent.action.ALARM" />
+                <action android:name="com.test.intent.action.ALARM"/>
             </intent-filter>
         </receiver>
 
         <activity
             android:name=".utils.ImagePickerManager"
-            android:theme="@style/HomeThemeNew" />
-
+            android:theme="@style/HomeThemeNew"/>
         <activity
             android:name=".base.BaseChildActivity"
             android:theme="@style/HomeThemeNew">
+        </activity>
+        <activity android:name=".notification.NotificationActivity">
 
+<<<<<<< HEAD
             <!-- <intent-filter>
                  <action android:name="android.intent.action.MAIN" />
 
                  <category android:name="android.intent.category.LAUNCHER" />
              </intent-filter>-->
 
+=======
+        </activity>
+        <activity android:name=".seekbar.SeekbarActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+>>>>>>> 83f3097b5ee4a066b10efd18922470c4c6525ce1
         </activity>
     </application>
 
