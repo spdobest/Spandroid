@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    >
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/line"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100"
+            >
+
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="60"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal|bottom"
+                />
+
+
+            <View
+                android:id="@+id/viewDebtYellow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:background="@color/yellow"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical"
+            >
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/viewEquityWhite"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                />
+
+
+            <View
+                android:id="@+id/viewEquityYellow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"
+        android:layout_centerInParent="true"
+        >
+
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/buttonSubmit"
+        >
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edittextAMountDebt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="Equity AMount"
+            android:layout_weight="1"
+            />
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edittextAMountEquity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="Equity AMount"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
