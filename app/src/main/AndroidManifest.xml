@@ -68,7 +68,27 @@
 
             <meta-data
                 android:name="android.app.shortcuts"
+<<<<<<< HEAD
                 android:resource="@xml/app_shortcuts" />
+=======
+                android:resource="@xml/app_shortcuts"/>
+        </activity>
+        <activity android:name=".recyclerView.RecyclerViewActivity"/>
+        <activity android:name=".activity.MyActivity"/>
+        <activity android:name=".alarmManager.AlarmActivity"/>
+        <activity android:name=".android5.Android5Activity"/>
+        <activity android:name=".android6.Android6Activity"/>
+        <activity android:name=".android7.Android7Activity"/>
+        <activity android:name=".android8.Android8Activity"/>
+        <activity android:name=".dialog.DialogActivity"
+            android:screenOrientation="sensor"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+>>>>>>> 81c840f2c18f50560d5d500f571f7f6d156f076d
         </activity>
         <activity android:name=".recyclerView.RecyclerViewActivity" />
         <activity android:name=".activity.MyActivity" />
@@ -285,10 +305,17 @@
         <activity android:name=".fingerpring_aunthetication.FingerPrintHomeActivity" />
         <activity android:name=".service.foreground.ForegroundServiceActivity" />
 
+<<<<<<< HEAD
         <service
             android:name=".service.foreground.BackgroundService"
             android:enabled="true"
             android:exported="true"></service>
+=======
+        </activity>
+        <activity android:name=".seekbar.SeekbarActivity">
+
+        </activity>
+>>>>>>> 81c840f2c18f50560d5d500f571f7f6d156f076d
     </application>
 
 </manifest>

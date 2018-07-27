@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -19,22 +20,39 @@ import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import spandroid.dev.R;
 
 /**
  * Created by Venkatesh on 3/22/16.
  */
-public class DialogActivity extends AppCompatActivity implements DFragment.DialogListener {
+public class DialogActivity extends AppCompatActivity implements DFragment.DialogListener, DialogInterface.OnDismissListener {
     boolean isUpdateDialogOpen;
     AlertDialog ratingDialog;
     DFragment dFragment;
 
+    MyDialogFragment myDialogFragment;
+
+    ArrayList<String> list = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+    //    savedInstanceState.putString("sp", "Siba");
+
+
         setContentView(R.layout.activity_dialog);
+
+       /* list.add("list1");
+        list.add("list2");
+        list.add("list3");
+        list.add("list4");*/
+
+
 
         findViewById(R.id.btnDialogIphone).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +105,19 @@ public class DialogActivity extends AppCompatActivity implements DFragment.Dialo
                 showMonthAndYearPicker();
             }
         });
+
+        findViewById(R.id.butonNewDialogFragment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+                myDialogFragment = new MyDialogFragment();
+                myDialogFragment.show(getSupportFragmentManager(), "");
+            }
+        });
+
+
     }
 
     private void updateAppDialog() {
@@ -393,4 +424,18 @@ public class DialogActivity extends AppCompatActivity implements DFragment.Dialo
         alert.show();
     }
 
+    @Override
+    public void onDismiss(DialogInterface dialogInterface) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        if (savedInstanceState != null && savedInstanceState.containsKey("sp")) {
+            String sty = savedInstanceState.getString("sp");
+        }
+
+    }
 }
