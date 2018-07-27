@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/tv_Log_using"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_fingerprint_white_48dp" />
+    <TextView
+        android:id="@+id/tv_Log_using"
+        android:text="Login Using"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/tv_touch_id"
+        android:layout_below="@+id/tv_Log_using"
+        android:text="Touch Id"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#BB6Eff"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <ImageView
+        android:src="@android:drawable/ic_media_next"
+        android:layout_below="@+id/tv_touch_id"
+        android:layout_width="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp" />
+
+</RelativeLayout>

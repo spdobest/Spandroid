@@ -219,13 +219,13 @@ public class MainNetworkActivity extends AppCompatActivity {
     private void stopTimer(int type) {
         switch (type) {
             case TYPE_ASYNC:
-                tvAsyncTime.setText("Time " + ((System.currentTimeMillis() - timeStart) / 1000) + " Sec");
+                tvAsyncTime.setText("Time " + ((System.currentTimeMillis() - timeStart) ) + " MilliSecond");
                 break;
             case TYPE_VOLLEY:
-                tvVolleyTime.setText("Time " + ((System.currentTimeMillis() - timeStart) / 1000) + " Sec");
+                tvVolleyTime.setText("Time " + ((System.currentTimeMillis() - timeStart)) + " MilliSecond");
                 break;
             case TYPE_RETRO:
-                tvRetrofitTime.setText("Time " + ((System.currentTimeMillis() - timeStart) / 1000) + " Sec");
+                tvRetrofitTime.setText("Time " + ((System.currentTimeMillis() - timeStart)) + " MilliSecond");
                 break;
         }
     }

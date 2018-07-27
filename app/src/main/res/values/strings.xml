@@ -204,4 +204,8 @@ Android 5.0 Lollipop was one of the most significant Android releases ever, in n
     <string name="label_custom_media_content_view_notification">Show custom media content view notifications</string>
     <string name="label_heads_up_notification">Show heads up notification</string>
     <string name="label_heads_up_custom_layout_notification">Show custom layout heads up notification</string>
+
+    <string name="instructions">
+Place your fingertip on the Home button to verify your identity
+</string>
 </resources>

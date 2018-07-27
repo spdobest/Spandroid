@@ -13,10 +13,8 @@ import kotlinx.android.synthetic.main.itemview_nested_recycler_radio.view.*
 /**
  * Created by root on 6/19/18.
  */
-class NestedExpandRecyclerAdapter(internal var listModel: List<NestedRecyclerModel>) : RecyclerView.Adapter<NestedExpandRecyclerAdapter.MyViewHolder>() {
-    override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
+abstract class NestedExpandRecyclerAdapter(internal var listModel: List<NestedRecyclerModel>) : RecyclerView.Adapter<NestedExpandRecyclerAdapter.MyViewHolder>() {
 
-    }
 
     override fun getItemCount(): Int {
         return listModel!!.size
