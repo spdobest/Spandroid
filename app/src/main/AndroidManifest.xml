@@ -69,7 +69,7 @@
         <activity android:name=".android5.Android5Activity" />
         <activity android:name=".android6.Android6Activity" />
         <activity android:name=".android7.Android7Activity" />
-        <activity android:name=".android8.Android8Activity" />
+        <activity android:name=".android8_oreo.Android8Activity" />
         <activity android:name=".dialog.DialogActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -234,7 +234,7 @@
         </activity>
         <activity
             android:name=".kotlin.weather_forecast.weatherApp.ui.activities.MainActivity"
-            android:theme="@style/AppThemeWeather"></activity>
+            android:theme="@style/AppThemeWeather" />
         <activity
             android:name=".kotlin.weather_forecast.weatherApp.ui.activities.SettingsActivity"
             android:theme="@style/AppThemeWeather" />
@@ -262,13 +262,13 @@
         <activity android:name=".appversion_features.AppVerionFeatureActivity" />
 
         <service
-            android:name=".android8.MyJobIntentService"
+            android:name=".android8_oreo.MyJobIntentService"
             android:exported="false" />
         <service
-            android:name=".android8.MyJobIntentServiceJava"
+            android:name=".android8_oreo.MyJobIntentServiceJava"
             android:exported="false" />
 
-        <receiver android:name=".android8.AlarmReceiver">
+        <receiver android:name=".android8_oreo.AlarmReceiver">
             <intent-filter>
                 <action android:name="com.test.intent.action.ALARM" />
             </intent-filter>
@@ -279,10 +279,16 @@
             android:theme="@style/HomeThemeNew" />
         <activity
             android:name=".base.BaseChildActivity"
-            android:theme="@style/HomeThemeNew"></activity>
-        <activity android:name=".notification.NotificationActivity"></activity>
-        <activity android:name=".seekbar.SeekbarActivity"></activity>
-        <activity android:name=".security.save_keysin_keystore.KeystoreActivity"></activity>
+            android:theme="@style/HomeThemeNew" />
+        <activity android:name=".notification.NotificationActivity" />
+        <activity android:name=".seekbar.SeekbarActivity" />
+        <activity android:name=".security.save_keysin_keystore.KeystoreActivity" />
+
+        <service
+            android:name=".android8_oreo.jobScheduler.MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".android8_oreo.jobScheduler.JobSchedulerActivity"></activity>
     </application>
 
 </manifest>
