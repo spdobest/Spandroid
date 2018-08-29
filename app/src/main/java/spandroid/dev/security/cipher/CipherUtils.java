@@ -2,8 +2,10 @@ package spandroid.dev.security.cipher;
 
 
 import java.security.Key;
+import java.util.Base64;
 
 import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 
 /**
  * Created by root on 8/10/18.
@@ -22,7 +24,7 @@ public class CipherUtils {
         System.out.println("valueToEnc.getBytes().length "+valueToEnc.getBytes().length);
         byte[] encValue = c.doFinal(valueToEnc.getBytes());
         System.out.println("encValue length" + encValue.length);
-        byte[] encryptedByteValue = new Base64().encode(encValue);
+        byte[] encryptedByteValue = null; // new Base64().encode(encValue);
         String encryptedValue = encryptedByteValue.toString();
         System.out.println("encryptedValue " + encryptedValue);
 
@@ -37,7 +39,7 @@ public class CipherUtils {
         byte[] enctVal = c.doFinal(encryptedValue.getBytes());
         System.out.println("enctVal length " + enctVal.length);
 
-        byte[] decordedValue = new Base64().decode(enctVal);
+        byte[] decordedValue = null;//new Base64().decode(enctVal);
 
         return decordedValue.toString();
     }

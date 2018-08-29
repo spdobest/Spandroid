@@ -1,9 +1,10 @@
-package spandroid.dev.google_products.fcm.notifiction;
+package spandroid.dev.firebase.pushNotification;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -12,6 +13,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -30,8 +32,29 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private NotificationUtils notificationUtils;
 
     @Override
+    public void onNewToken(String s) {
+        super.onNewToken(s);
+        Log.e("NEW_TOKEN", s);
+
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+
+        // Saving reg id to shared preferences
+        storeRegIdInPref(refreshedToken);
+
+        // sending reg id to your server
+        sendRegistrationToServer(refreshedToken);
+
+        // Notify UI that registration has completed, so the progress indicator can be hidden.
+        Intent registrationComplete = new Intent(Config.REGISTRATION_COMPLETE);
+        registrationComplete.putExtra("token", refreshedToken);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(registrationComplete);
+
+    }
+
+    @Override
     public void onDeletedMessages() {
         super.onDeletedMessages();
+        Log.i(TAG, "onDeletedMessages: ");
     }
 
     @Override
@@ -88,6 +111,21 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     private void handleDataMessage(JSONObject json) {
+
+        /**
+         * {
+            "message":{
+                "token":"bk3RNwTe3H0:CI2k_HHwgIpoDKCIZvvDMExUdFQ3P1...",
+            "data":{
+                "title" : "Mario",
+                "message" : "great match!",
+                "Room" : "PortugalVSDenmark"
+                    }
+                }
+            }
+         */
+
+
         Log.e(TAG, "push json: " + json.toString());
 
         try {
@@ -160,6 +198,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private void sendNotification(String messageTitle, String messageBody) {
         Intent intent = new Intent(this, FCMActivity.class);
+        intent.putExtra("title", messageTitle);
+        intent.putExtra("body", messageBody);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* request code */, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
@@ -179,5 +219,17 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
+    }
+
+    private void sendRegistrationToServer(final String token) {
+        // sending gcm token to server
+        Log.e(TAG, "sendRegistrationToServer: " + token);
+    }
+
+    private void storeRegIdInPref(String token) {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences(Config.SHARED_PREF, 0);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString("regId", token);
+        editor.commit();
     }
 }

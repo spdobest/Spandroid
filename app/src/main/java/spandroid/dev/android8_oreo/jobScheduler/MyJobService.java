@@ -17,6 +17,8 @@ public class MyJobService extends JobService {
         // We need 'jobParameters' so we can call 'jobFinished'
         startWorkOnNewThread(jobParameters); // Services do NOT run on a separate thread
 
+//        jobFinished(params, !success);
+
         return isWorking;
     }
 

@@ -61,9 +61,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         this.update("Fingerprint Authentication succeeded.", true);
 
 
-        Intent intent = new Intent(context, HomeActivity.class);
-        context.startActivity(intent);
-        ((Activity) context).finish();
+
 
     }
 

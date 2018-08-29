@@ -2,6 +2,7 @@ package spandroid.dev.constraintlayout
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import spandroid.dev.R
 
 class ConstraintActivity : AppCompatActivity() {
 

@@ -17,7 +17,7 @@ abstract class NestedExpandRecyclerAdapter(internal var listModel: List<NestedRe
 
 
     override fun getItemCount(): Int {
-        return listModel!!.size
+        return listModel.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

@@ -1,4 +1,4 @@
-package spandroid.dev.google_products.fcm.notifiction;
+package spandroid.dev.firebase.pushNotification;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

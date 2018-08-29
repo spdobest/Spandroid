@@ -69,14 +69,7 @@
         <activity android:name=".android5.Android5Activity" />
         <activity android:name=".android6.Android6Activity" />
         <activity android:name=".android7.Android7Activity" />
-        <activity android:name=".android8_oreo.Android8Activity" />
-        <activity android:name=".dialog.DialogActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".dialog.DialogActivity" />
         <activity android:name=".animation.AnimationActivity" />
         <activity android:name=".base.java.BaseActivity" />
         <activity android:name=".bindedService.BindServiceActivity" />
@@ -146,18 +139,23 @@
 
         <!-- Firebase Notifications -->
 
-        <activity android:name=".google_products.fcm.notifiction.FCMActivity" />
+        <activity android:name=".firebase.pushNotification.FCMActivity" />
 
-        <service android:name=".google_products.fcm.notifiction.MyFirebaseMessagingService">
+        <service
+            android:name=".firebase.pushNotification.MyFirebaseMessagingService"
+            android:stopWithTask="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> -->
             </intent-filter>
         </service>
-        <service android:name=".google_products.fcm.notifiction.MyFirebaseInstanceIDService">
+        <!--
+        <service android:name=".firebase.pushNotification.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+        -->
         <!-- ./Firebase Notifications -->
 
         <activity android:name=".google_products.googleDrive.GoogleDriveDownloadActivity">
@@ -203,7 +201,6 @@
             -->
         </activity>
         <activity android:name=".network.retrofit.RetrofitMainActivity" />
-        FOR ANALYTICS
         <!--  -->
         <service
             android:name="com.google.android.gms.measurement.AppMeasurementService"
@@ -260,20 +257,6 @@
         </provider>
 
         <activity android:name=".appversion_features.AppVerionFeatureActivity" />
-
-        <service
-            android:name=".android8_oreo.MyJobIntentService"
-            android:exported="false" />
-        <service
-            android:name=".android8_oreo.MyJobIntentServiceJava"
-            android:exported="false" />
-
-        <receiver android:name=".android8_oreo.AlarmReceiver">
-            <intent-filter>
-                <action android:name="com.test.intent.action.ALARM" />
-            </intent-filter>
-        </receiver>
-
         <activity
             android:name=".utils.ImagePickerManager"
             android:theme="@style/HomeThemeNew" />
@@ -288,7 +271,26 @@
             android:name=".android8_oreo.jobScheduler.MyJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <activity android:name=".android8_oreo.jobScheduler.JobSchedulerActivity"></activity>
+        <activity android:name=".android8_oreo.jobScheduler.JobSchedulerActivity" />
+        <activity android:name=".firebase.FirebaseActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- JOB SERVICE -->
+        <activity android:name=".android8_oreo.jobServices.JobServicesActivity" />
+        <service
+            android:name=".android8_oreo.jobScheduler.MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".android8_oreo.jobServices.OreoJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!--NOTIFICATION-->
+        <activity android:name=".android8_oreo.nitification.OreoNotificationActivity"/>
+
     </application>
 
 </manifest>

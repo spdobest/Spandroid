@@ -27,9 +27,9 @@ public class LauncherActivity extends AppCompatActivity {
 
 
         if (OsVersionUtility.Companion.isNought()) {
-            ShortcutManager shortcutManager = getSystemService(ShortcutManager.class);
+           // ShortcutManager shortcutManager = getSystemService(ShortcutManager.class);
 
-            ShortcutInfo shortcut = new ShortcutInfo.Builder(this, "id1")
+           /* ShortcutInfo shortcut = new ShortcutInfo.Builder(this, "id1")
                     .setShortLabel("Web site")
                     .setLongLabel("Open the web site")
                     .setIcon(Icon.createWithResource(this, R.drawable.arrow_left))
@@ -37,7 +37,7 @@ public class LauncherActivity extends AppCompatActivity {
                             Uri.parse("https://www.mysite.example.com/")))
                     .build();
 
-            shortcutManager.setDynamicShortcuts(Arrays.asList(shortcut));
+            shortcutManager.setDynamicShortcuts(Arrays.asList(shortcut));*/
         }
     }
 }

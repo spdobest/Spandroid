@@ -66,6 +66,7 @@ public class JobSchedulerActivity extends AppCompatActivity {
                 num /= 10;
             }
         }
+        return 12;
     }
 
 }
