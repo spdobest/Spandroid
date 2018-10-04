@@ -273,24 +273,27 @@
 
         <activity android:name=".android8_oreo.jobScheduler.JobSchedulerActivity" />
         <activity android:name=".firebase.FirebaseActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- JOB SERVICE -->
         <activity android:name=".android8_oreo.jobServices.JobServicesActivity" />
+
         <service
             android:name=".android8_oreo.jobScheduler.MyJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
         <service
             android:name=".android8_oreo.jobServices.OreoJobIntentService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
-        <!--NOTIFICATION-->
-        <activity android:name=".android8_oreo.nitification.OreoNotificationActivity"/>
+        <!-- NOTIFICATION -->
+        <activity android:name=".android8_oreo.nitification.OreoNotificationActivity" />
+        <activity android:name=".popupwindow.PopWindowListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

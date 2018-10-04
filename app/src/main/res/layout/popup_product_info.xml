@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mLinearlayoutInfoPopUp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="@dimen/dimen_200dp"
+    android:layout_height="@dimen/dimen_200dp"
     android:layout_margin="@dimen/dimen_5dp"
     android:gravity="center_vertical">
 
@@ -21,7 +21,7 @@
             android:id="@+id/mGridViewProductInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:numColumns="2"></GridView>
+            android:numColumns="2"/>
 
 
         <!--android:horizontalSpacing="@dimen/dimen_1dp"

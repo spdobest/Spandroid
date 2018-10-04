@@ -17,9 +17,6 @@ import spandroid.dev.android8_oreo.jobScheduler.MyJobService
 import android.os.Build.VERSION_CODES.O
 import android.os.Build.VERSION.SDK_INT
 
-
-
-
 class JobServicesActivity : AppCompatActivity(), View.OnClickListener {
 
     /**
@@ -29,7 +26,6 @@ class JobServicesActivity : AppCompatActivity(), View.OnClickListener {
      * https://medium.com/urbanclap-engineering/making-app-ready-for-oreo-738bf57114f4
      *
      */
-
     val LOAD_ARTWORK_JOB_ID = 123
 
     override fun onClick(p0: View?) {
@@ -48,9 +44,8 @@ class JobServicesActivity : AppCompatActivity(), View.OnClickListener {
 
             }
             R.id.buttonStartForegroundService ->{
-
-                val intentService = Intent(applicationContext,ForegroundService())
-                startService(applicationContext,intentService)
+               /* val intentService = Intent(applicationContext,ForegroundService.class)
+                startService(applicationContext,intentService)*/
             }
         }
     }
